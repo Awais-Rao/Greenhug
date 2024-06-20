@@ -1,0 +1,346 @@
+/*==================== Fonts ====================*/
+@font-face {
+    font-family: DMSans-Regular;
+    src: url("fonts/DMSans_18pt-Regular.ttf");
+}
+
+
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+
+    /*========== Font and typography ==========*/
+    --navbar-font: 14px;
+    --section-title-font: 48px;
+    --section-subtitle-font: 18px;
+    --paragraph-font: 16.8px;
+
+
+
+
+    /*========== Colors ==========*/
+    --primary-color: #5C6A5D;
+    --primary-dark-color: #39433A;
+    --sub-title-color: #9795B5;
+    --gold-color: #BF8C2C;
+    --white-color: #fff;
+    --brown-color: #9d8f8a;
+}
+
+
+
+/*=============== BASE ===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: DMSans-Regular;
+}
+
+
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.navbar {
+    padding: 1rem 6rem;
+}
+
+.section {
+    padding: 5rem 6rem;
+}
+
+.section__title {
+    color: var(--primary-color);
+    font-size: var(--section-title-font);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.section_subtitle {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: var(--section-subtitle-font);
+    color: var(--sub-title-color);
+    /* line-height: 30px; */
+}
+
+
+
+
+/* ---------- Navbar ---------- */
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    font-size: var(--navbar-font);
+    color: var(--white-color) !important;
+    position: relative;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+
+/* Apply the ::after only to .nav-link elements that do not have the 'no__hover' class */
+.nav-link:not(.no__hover)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+    background: var(--white-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Apply the active and hover states to the correct .nav-link elements */
+.nav-link.active:not(.no__hover)::after,
+.nav-link:hover:not(.no__hover)::after {
+    right: 0;
+}
+
+.navbar__button {
+    background: var(--white-color) !important;
+    color: var(--primary-color) !important;
+    border-radius: 500px;
+    font-weight: 500;
+    font-size: var(--navbar-font);
+}
+
+
+
+/* ----- Navbar Toggler ----- */
+.custom-toggler.navbar-toggler {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Setting the stroke to green using rgb values (0, 128, 0) */
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(225, 225, 225, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+/* ----- Fixed Navbar ----- */
+
+.fixed__top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== Home ========== */
+
+.hero__section {
+    position: relative;
+    height: 90vh;
+    background-image: url('../images/header-bg.jpg');
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero__section::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.header__data {
+    width: 80%;
+    position: relative;
+    z-index: 1;
+    transform: translateY(-10%);
+}
+
+.header__data .sub__heading {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.header__data .heading {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.header__data .paragraph {
+    font-size: 24px;
+    color: #DDD2C0;
+}
+
+.header__data .button__wrapper {}
+
+.header_btn {
+    font-size: var(--section-subtitle-font);
+    border-radius: 500px;
+    padding: 1rem 2rem;
+}
+
+.start_btn {
+    background: var(--primary-color) !important;
+    color: var(--white-color) !important;
+}
+
+.sales_btn {
+    background: var(--white-color) !important;
+    color: var(--primary-color) !important;
+}
+
+
+
+
+
+
+
+.containers {
+    height: 100vh;
+    background: pink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== Media Queries ========== */
+
+
+/* For Extra large devices */
+@media (max-width: 1200px) {
+
+
+
+
+
+
+    .navbar-nav {
+        gap: 5px;
+    }
+
+    .containers {
+        background: orange;
+    }
+
+
+}
+
+
+/* Large devices */
+@media (max-width: 992px) {
+    .navbar-nav {
+        gap: 5px;
+    }
+}
+
+
+/* Medium devices */
+@media (min-width: 576px) and (max-width: 768px) {
+    .containers {
+        background: green;
+    }
+
+    /* ----- Open Navbar Menu ----- */
+    .navbar-collapse {
+        width: min-content !important;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: var(--primary);
+        /* Ensure the background color matches the navbar */
+        padding: .5rem 1.5rem 1rem;
+    }
+
+    .navbar-nav {
+        align-items: start;
+        gap: 10px;
+    }
+
+}
+
+
+/* Small devices */
+@media (max-width: 576px) {
+
+    .containers {
+        background: red;
+    }
+
+
+}
+
+
+
+
+
+
+
+/* @media screen and (max-width: 768px) {
+
+    .navbar {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-collapse {
+        width: min-content !important;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: var(--primary);
+        padding: .5rem 1.5rem 1rem;
+    }
+
+    .navbar-nav {
+        align-items: start;
+        gap: 10px;
+    }
+
+
+
+
+} */
