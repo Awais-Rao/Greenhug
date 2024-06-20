@@ -14,6 +14,7 @@
     --section-title-font: 48px;
     --section-subtitle-font: 18px;
     --paragraph-font: 16.8px;
+    --large-heading-font: 28px;
 
 
 
@@ -25,6 +26,8 @@
     --gold-color: #BF8C2C;
     --white-color: #fff;
     --brown-color: #9d8f8a;
+    --gre-blue-color: #EEF2F4;
+
 }
 
 
@@ -46,8 +49,16 @@
     padding: 1rem 6rem;
 }
 
-.section {
-    padding: 5rem 6rem;
+.hero {
+    padding: 9rem 6rem;
+}
+
+.section__head {
+    padding: 5rem 6rem 0;
+}
+
+.section__data {
+    padding: 3rem 6rem 5rem;
 }
 
 .section__title {
@@ -65,6 +76,11 @@
     font-size: var(--section-subtitle-font);
     color: var(--sub-title-color);
     /* line-height: 30px; */
+}
+
+
+.grey {
+    background: var(--gre-blue-color);
 }
 
 
@@ -155,9 +171,10 @@
 
 /* ========== Home ========== */
 
+/* ----- Header ----- */
+
 .hero__section {
     position: relative;
-    height: 90vh;
     background-image: url('../images/header-bg.jpg');
     background-size: cover;
     background-position: top;
@@ -222,18 +239,144 @@
 
 
 
+/* ----- Projects ----- */
 
+.project_card {
+    height: 365px;
+    /* width: 263px; */
+    width: 95%;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+}
 
+.project_card::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, transparent 60%, #000000);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 
-.containers {
-    height: 100vh;
-    background: pink;
+.project_card .project__card_img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project__card_data {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.project_card .heading {
+    color: var(--white-color);
+    font-size: var(--large-heading-font);
+    font-weight: 600;
+    line-height: 40%;
+}
+
+.project_card .sub_heading {
+    color: var(--white-color);
+    font-size: var(--paragraph-font);
+    font-weight: 500;
+    line-height: 60%;
+    text-align: right;
 }
 
 
+/* ----- Number Impact ----- */
+
+.number__card {
+    height: 100%;
+    background: var(--white-color);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.number__card_data{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.number__card_big {
+    padding: 3rem;
+}
+
+.number__card img{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
 
 
+.number__card svg {
+    height: 100px;
+    fill: var(--primary-dark-color);
+    transition: all 0.3s ease-in-out;
+}
 
+.number__card_big svg {
+    height: 170px;
+}
+
+.number__card_data {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.number__card_text {
+    text-align: left;
+}
+
+.number__card .number_card_text {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 95%;
+}
+
+.number__card_big .number_card_text {
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 95%;
+}
+
+
+.number__card:hover svg{
+    fill: var(--white-color);
+}
+.number__card:hover .number__card_data{
+    color: var(--white-color);
+}
+.number__card:hover img{
+    opacity: 1;
+    filter: blur(1.5px);
+    transition: all 0.3s ease-in-out;
+}
 
 
 
