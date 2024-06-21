@@ -11,6 +11,9 @@
 
     /*========== Font and typography ==========*/
     --navbar-font: 14px;
+    --header-heading-font: 56px;
+    --header-subheading-font: 40px;
+    --header-paragraph-font: 24px;
     --section-title-font: 48px;
     --section-subtitle-font: 18px;
     --paragraph-font: 16.8px;
@@ -49,7 +52,7 @@
 /*=============== REUSABLE CSS CLASSES ===============*/
 
 .navbar {
-    padding: 1rem 6rem;
+    padding: .5rem 6rem;
 }
 
 .hero {
@@ -309,6 +312,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    height: 100vh;
 }
 
 .hero__section::after {
@@ -330,28 +334,32 @@
 }
 
 .header__data .sub__heading {
-    font-size: 40px;
+    font-size: var(--header-subheading-font);
     font-weight: 700;
     color: var(--white-color);
 }
 
 .header__data .heading {
-    font-size: 56px;
+    font-size: var(--header-heading-font);
     font-weight: 700;
     color: var(--white-color);
 }
 
 .header__data .paragraph {
-    font-size: 24px;
+    font-size: var(--header-paragraph-font);
     color: #DDD2C0;
 }
 
-.header__data .button__wrapper {}
+.header__data .button__wrapper {
+    display: flex;
+    align-items: center;
+}
 
 .header_btn {
     font-size: var(--section-subtitle-font);
     border-radius: 500px;
     padding: 1rem 2rem;
+    text-wrap: nowrap;
 }
 
 .start_btn {
@@ -477,14 +485,12 @@
     transition: all 0.3s ease-in-out;
 }
 
-.number__card_text {
-    text-align: left;
-}
 
 .number__card .number_card_text {
     font-size: var(--large-heading-font);
     font-weight: 700;
     line-height: 95%;
+    text-align: left;
 }
 
 .number__card_big .number_card_text {
@@ -732,41 +738,53 @@
 /* ========== Media Queries ========== */
 
 
-/* For Extra large devices */
+/* Extra large devices (up to 1200px) */
 @media (max-width: 1200px) {
 
+    :root {
 
+        /*========== Font and typography ==========*/
+        --navbar-font: 14px;
+        --header-heading-font: 56px;
+        --header-subheading-font: 40px;
+        --header-paragraph-font: 24px;
+        --section-title-font: 48px;
+        --section-subtitle-font: 18px;
+        --paragraph-font: 16.8px;
+        --large-heading-font: 28px;
+        --big-card-heading: 62px;
 
-
-
-
-    .navbar-nav {
-        gap: 5px;
     }
 
-    .containers {
-        background: orange;
-    }
 
+
+    .navbar {
+        padding: 1rem 5rem;
+    }
 
 }
 
 
-/* Large devices */
+
+/* Large devices (up to 992px) */
 @media (max-width: 992px) {
+
+    .navbar {
+        padding: 1rem 1rem;
+    }
+
     .navbar-nav {
-        gap: 5px;
+        gap: 0px;
     }
 }
 
 
-/* Medium devices */
-@media (min-width: 576px) and (max-width: 768px) {
 
+/* Medium devices (up to 768px) */
+@media (max-width: 768px) {
 
-
-    .containers {
-        background: green;
+    .navbar {
+        padding: 1rem 2rem;
     }
 
     /* ----- Open Navbar Menu ----- */
@@ -775,7 +793,7 @@
         position: absolute;
         right: 0;
         top: 100%;
-        background-color: var(--primary);
+        background-color: var(--primary-color);
         /* Ensure the background color matches the navbar */
         padding: .5rem 1.5rem 1rem;
     }
@@ -787,16 +805,185 @@
 
 }
 
-
-/* Small devices */
+/* Small devices (up to 576px) */
 @media (max-width: 576px) {
 
-    .containers {
-        background: red;
+    :root {
+
+        /*========== Font and typography ==========*/
+        --navbar-font: 14px;
+        --header-heading-font: 36px;
+        --header-subheading-font: 24px;
+        --header-paragraph-font: 20px;
+        --section-title-font: 42px;
+        --section-subtitle-font: 20px;
+        --paragraph-font: 14.5px;
+        --large-heading-font: 28px;
+        --big-card-heading: 62px;
+
+    }
+
+    /*=============== REUSABLE CSS CLASSES ===============*/
+
+    .navbar {
+        padding: .8rem 1rem;
+    }
+
+    .hero {
+        padding: 4rem 1.5rem;
+    }
+
+    .section__head {
+        padding: 3rem 2rem 0;
+    }
+
+    .section__data {
+        padding: 2rem 2rem 3rem;
+    }
+
+    .slide__section_data {
+        padding: 2rem 0 3rem !important;
+    }
+
+    .section__title {
+        text-align: left;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .section_subtitle {
+        width: 100%;
+        text-align: left;
     }
 
 
+    /* ---- Header ----- */
+    .header__data {
+        text-align: center;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        transform: translateY(-10%);
+    }
+
+    .header__data .heading {
+        line-height: 42px;
+        font-weight: 550;
+        margin-bottom: 2rem;
+    }
+
+    .header__data .sub__heading {
+        font-weight: 550;
+        line-height: 66.2px;
+    }
+
+    .header__data .button__wrapper {
+        margin-top: 2rem;
+        justify-content: center;
+    }
+
+    .header_btn {
+        font-size: var(--section-subtitle-font);
+        padding: .8rem 1rem;
+    }
+
+    /* ----- Number impact ----- */
+
+    .number__card_wrapper_flex {
+        display: flex !important;
+        align-items: center;
+        overflow: scroll;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .number__card_wrapper_flex::-webkit-scrollbar {
+        display: none;
+
+    }
+
+    .second_number__card_wrapper_flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .number__card {
+        /* margin: 2rem; */
+        transform: scale(0.9);
+    }
+
+    .number__card_big,
+    .number__card {
+        padding: 3rem;
+    }
+
+    .number__card_big svg,
+    .number__card svg {
+        height: 100px;
+        margin-bottom: 1rem;
+    }
+
+    .number__card_big .number_card_text,
+    .number__card .number_card_text {
+        font-size: var(--large-heading-font);
+        text-align: center;
+    }
+
+
+    /* ---- Testimonial ----- */
+    .testimonial__cards_wrapper{
+        flex-wrap: nowrap;
+    }
+
+
+
+    /* ---- Goal Section----- */
+    .goal__card {
+        transform: translateX(-4%) !important;
+    }
+
+    .goal__card_data {
+        padding: 3rem 2rem;
+    }
+
+    .goal__number {
+        font-size: 100px;
+        font-weight: 700;
+    }
+
+    .goal__title {
+        margin-left: 4rem;
+    }
+
+    .goal__description_wrapper {
+        margin-top: 0;
+    }
+
+    .goal__swiper_btn-wrapper {
+        margin-top: 0rem;
+    }
+
+
+    /* ----- Partner ----- */
+    .partner__img_wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
 }
+
+/* Extra small devices (up to 425px) */
+@media (max-width: 425px) {}
+
+
+
+
+
 
 
 
