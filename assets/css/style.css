@@ -942,6 +942,7 @@
     }
     .testimonial__data {
         padding: 1rem 1.3rem;
+        background: red;
     }
     .testimonial__text {
         margin-bottom: 2rem;
