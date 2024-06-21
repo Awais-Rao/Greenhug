@@ -848,7 +848,8 @@
     .section__title {
         text-align: left;
         font-weight: 700;
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
+        line-height: 42px;
     }
 
     .section_subtitle {
