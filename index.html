@@ -40,19 +40,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Historia</a>
+                            <a class="nav-link" href="history.html">Historia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Experience</a>
+                            <a class="nav-link" href="experience.html">Experience</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Talks</a>
+                            <a class="nav-link" href="talks.html">Talks</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Lifestyle</a>
+                            <a class="nav-link" href="lifestyle.html">Lifestyle</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Upcycling</a>
+                            <a class="nav-link" href="upscaling.html">Upcycling</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link no__hover" href="ranking.html">
@@ -82,6 +82,7 @@
         </section>
 
     </header>
+
     <main>
 
         <!-- ===== Project Section ===== -->
@@ -487,7 +488,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -498,6 +499,7 @@
 
     </main>
 
+    <footer>
         <div class="footer">
             <div class="footer__upper">
                 <div class="footer__logo">
@@ -526,7 +528,7 @@
                 </p>
             </div>
         </div>
-        
+    </footer>
 
     <!-- ===== SwiperJs JavaScript ===== -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -608,6 +610,66 @@
             prevEl: ".swiper-button-prev",
         },
     });
+</script>
+
+<script>
+    // === scroll for number cards ==
+
+    function checkScreenWidthAndRemoveClass() {
+        // Get the elements
+        const firstNumberCardRow = document.getElementById('number__card_wrapper_flex');
+        const secondNumberCardRow = document.getElementById('second_number__card_wrapper_flex');
+
+        // Check the screen width
+        if (window.innerWidth <= 576) {
+            // Remove the 'row' class if screen width is 576px or less
+            if (firstNumberCardRow.classList.contains('row')) {
+                firstNumberCardRow.classList.remove('row');
+            }
+            if (secondNumberCardRow.classList.contains('row')) {
+                secondNumberCardRow.classList.remove('row');
+            }
+        } else {
+            // Add the 'row' class if screen width is greater than 576px
+            if (!firstNumberCardRow.classList.contains('row')) {
+                firstNumberCardRow.classList.add('row');
+            }
+            if (!secondNumberCardRow.classList.contains('row')) {
+                secondNumberCardRow.classList.add('row');
+            }
+        }
+    }
+
+    // Run the function on initial load
+    checkScreenWidthAndRemoveClass();
+
+    // Run the function on window resize
+    window.addEventListener('resize', checkScreenWidthAndRemoveClass);
+
+
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const wrapper = document.querySelector('.number__card_wrapper_flex');
+        const cardWidth = document.querySelector('.number__card').offsetWidth;
+
+        wrapper.addEventListener('scroll', () => {
+            if (wrapper.scrollTimeout) {
+                clearTimeout(wrapper.scrollTimeout);
+            }
+
+            wrapper.scrollTimeout = setTimeout(() => {
+                const scrollLeft = wrapper.scrollLeft;
+                const closestIndex = Math.round(scrollLeft / cardWidth);
+                wrapper.scrollTo({
+                    left: closestIndex * cardWidth,
+                    behavior: 'smooth'
+                });
+            }, 100);  // Adjust the timeout as needed
+        });
+    });
+
 </script>
 
 </html>
