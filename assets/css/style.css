@@ -978,6 +978,11 @@
     pointer-events: none;
 }
 
+.experience__hero_title {
+    color: var(--primary-dark-color);
+    padding: 0 6rem;
+    line-height: 130%;
+}
 
 .experience_advice_wrapper {
     display: flex;
@@ -1006,6 +1011,10 @@
     justify-content: center;
 }
 
+.experience__number_data {
+    width: 100%;
+}
+
 .experience__number_heading {
     font-size: var(--header-subheading-font);
     font-weight: 700;
@@ -1016,7 +1025,6 @@
 
 .experience__number_number_wrapper {
     border: 10.35px solid var(--white-color);
-    box-shadow: 0px 0px 0px 0px #0000001F;
     font-size: var(--ranking-heading-font);
     color: var(--white-color);
     background: #000;
@@ -1028,19 +1036,19 @@
 
     box-shadow: 0px 13.97px 31.04px 0px #0000001F,
         0px 56.91px 56.91px 0px #0000001A;
-
 }
 
 /* ----- Experince Gallery ---- */
 
-.experience__gallery_image{
+.experience__gallery_image {
     position: relative;
     overflow: hidden;
     border-radius: 15px;
     height: 320px;
     margin-bottom: 2rem;
 }
-.experience__gallery_image img{
+
+.experience__gallery_image img {
     position: absolute;
     object-fit: cover;
     object-position: center;
@@ -1048,7 +1056,7 @@
     width: 100%;
 }
 
-.experience__gallery_image-big{
+.experience__gallery_image-big {
     height: 670px;
 }
 
@@ -1056,7 +1064,7 @@
 
 /* ----- Monitoring Section ----- */
 
-.monitoring__section{
+.monitoring__section {
     padding: 0;
 }
 
@@ -1065,13 +1073,15 @@
     flex-wrap: wrap;
 }
 
-.equal__height div  {
+.equal__height div {
     display: flex;
     flex-direction: column;
 }
 
-.monitoring__left, .monitoring__right {
-    flex: 1; /* Ensures both columns grow equally */
+.monitoring__left,
+.monitoring__right {
+    flex: 1;
+    /* Ensures both columns grow equally */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1079,13 +1089,13 @@
     margin: 0;
 }
 
-.monitoring__img_wrapper{
+.monitoring__img_wrapper {
     position: relative;
     overflow: hidden;
     height: 100%;
 }
 
-.monitoring__img_wrapper img{
+.monitoring__img_wrapper img {
     position: absolute;
     width: 100%;
     /* height: 100%; */
@@ -1094,44 +1104,46 @@
     transform: scale(1.5);
 }
 
-.monitoring__right_wrapper{
+.monitoring__right_wrapper {
     background: #DDD2C0;
     padding: 0;
     margin: 0;
 }
 
-.monitoring__right{
-    padding: 3rem;    
+.monitoring__right {
+    padding: 3rem;
 }
-.monitoring__heading{
+
+.monitoring__heading {
     font-size: var(--header-heading-font);
     color: var(--primary-dark-color);
     font-weight: 600;
     padding-right: 5rem;
     line-height: 120%;
 }
-.monitoring__heading span{
+
+.monitoring__heading span {
     color: var(--primary-color);
 }
 
-.monitoring__paragraph{
+.monitoring__paragraph {
     font-size: var(--header-paragraph-font);
     line-height: 140%;
     padding: 1.5rem 0;
 }
-.monitoring__bottom_heading{
+
+.monitoring__bottom_heading {
     font-size: var(--section-title-font);
     color: var(--primary-dark-color);
     text-decoration: underline;
     text-align: center;
-    /* padding: 0 1rem; */
     font-weight: 700;
 }
 
 
 
 /* ----- Experience Card ----- */
-.experience__card{
+.experience__card {
     background: var(--primary-color);
     padding: 3rem 0;
     display: flex;
@@ -1142,13 +1154,13 @@
     text-align: center;
 }
 
-.experience__card_heading{
+.experience__card_heading {
     color: #DDD2C0;
     font-size: var(--header-heading-font);
     font-weight: 700;
 }
 
-.experience__card_text{
+.experience__card_text {
     color: var(--white-color);
     font-size: var(--header-subheading-font);
     line-height: 120%;
@@ -1156,7 +1168,7 @@
     margin: .5rem 0 2rem;
 }
 
-.experience__card_button{
+.experience__card_button {
     background: var(--white-color) !important;
     color: var(--primary-dark-color) !important;
     border-radius: 500px;
@@ -1240,7 +1252,7 @@
     }
 
     /* ------ monitoring section ----- */
-    .monitoring__img_wrapper{
+    .monitoring__img_wrapper {
         height: 450px;
     }
 
@@ -1547,11 +1559,66 @@
     }
 
 
+    /* ========== Experience ========== */
 
+    .experience__hero_title {
+        text-align: center;
+        padding: 2rem 1rem 0rem;
+    }
 
+    .experience__hero_title p {
+        margin-top: 2rem;
+        font-size: var(--section-subtitle-font);
+    }
 
+    .experience_advice_img {
+        width: 100px;
+    }
 
+    .experience_advice_text {
+        font-size: var(--header-subheading-font);
+        text-align: left;
+    }
 
+    .experience__number_heading {
+        font-size: var(--header-heading-font);
+    }
+
+    .experience__number_container:nth-child(1) {
+        margin-top: 3rem;
+    }
+
+    .experience__number_number_wrapper {
+        padding: 1rem .5rem;
+        font-size: var(--section-title-font);
+        width: 100% !important;
+    }
+
+    .experience__gallery_image {
+        height: 180px;
+    }
+
+    .experience__gallery_image-big {
+        height: 380px;
+    }
+
+    .experience_gallery_right {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .monitoring__bottom_heading{
+        font-size: var(--large-heading-font);
+        line-height: 110%;
+    }
+
+    .experience__card{
+        padding: 3rem 2rem;
+    }
+    .experience__card_text{
+        width: 100%;
+        margin-top: 1rem;
+    }
 }
 
 
