@@ -18,6 +18,7 @@
     --section-subtitle-font: 18px;
     --paragraph-font: 16.8px;
     --large-heading-font: 28px;
+    --medium-heading-font: 28px;
     --big-card-heading: 62px;
 
     --ranking-heading-font: 70px;
@@ -972,6 +973,10 @@
 
 
 
+
+
+
+
 /* =========================================== Experience ================================================= */
 
 .experience__hero_img {
@@ -1177,6 +1182,147 @@
 
 
 
+/* =========================================== Talk ================================================= */
+
+
+.talk__hero {
+    position: relative;
+    background-image: url('../images/talk-hero-img.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+
+
+    padding: 8rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.talk__hero::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: #00000095;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.talk__hero_data {
+    position: relative;
+    z-index: 1;
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.talk__hero_heading {
+    font-size: var(--header-heading-font);
+    font-weight: 700;
+}
+
+.talk__hero_text {
+    font-size: var(--medium-heading-font);
+    width: 80%;
+    margin-top: 2rem;
+}
+
+/* ----- Talk Environment ----- */
+
+.green__talk_title {
+    padding: 0 3rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.talk__environment_point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.talk__environment_point span {
+    height: 30px;
+    width: 30px;
+    border-radius: 500px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    font-size: var(--paragraph-font);
+    padding-top: .8%;
+}
+
+.talk__environment_point p {
+    margin-bottom: 0;
+    color: #394149;
+    font-size: var(--header-paragraph-font);
+    margin-left: .5rem;
+}
+
+.talk__environment_image {
+    position: relative;
+    height: 500px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 3rem 5rem;
+}
+
+.talk__environment_image img {
+    position: absolute;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 100%;
+}
+
+.talk__environment_button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.talk__environment_button {
+    background: var(--primary-dark-color) !important;
+    color: var(--white-color) !important;
+    padding: 1rem 4rem;
+    border-radius: 500px;
+}
+
+
+/* ----- Talk Podcast ----- */
+
+.talk__podcast_text {
+    font-size: var(--medium-heading-font);
+    line-height: 170%;
+    color: #394149;
+    padding: 0 3rem;
+}
+
+.talk__environment_image-green {
+    margin: 3rem 0rem;
+}
+
+.talk__platforms_wrapper {
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+.talk__platform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.talk__platform a img {
+    height: 100px;
+}
 
 
 
@@ -1285,6 +1431,7 @@
         --section-subtitle-font: 20px;
         --paragraph-font: 14.5px;
         --large-heading-font: 28px;
+        --medium-heading-font: 21px;
         --big-card-heading: 44px;
 
         --ranking-heading-font: 35px;
@@ -1607,18 +1754,65 @@
         flex-direction: column-reverse;
     }
 
-    .monitoring__bottom_heading{
+    .monitoring__bottom_heading {
         font-size: var(--large-heading-font);
         line-height: 110%;
     }
 
-    .experience__card{
+    .experience__card {
         padding: 3rem 2rem;
     }
-    .experience__card_text{
+
+    .experience__card_text {
         width: 100%;
         margin-top: 1rem;
     }
+
+    /* ===== Talks ===== */
+    .talk__hero {
+        padding: 5rem 2rem;
+    }
+
+    .talk__hero_data {
+        text-align: left;
+    }
+
+    .talk__hero_text {
+        width: 100%;
+    }
+
+    .green__talk_title {
+        padding: 0;
+    }
+
+    .talk__environment_point {
+        justify-content: start;
+        margin-top: 1rem;
+    }
+
+    .talk__environment_point span {
+        padding-top: 1.5%;
+    }
+
+    .talk__environment_image {
+        height: 390px;
+        margin: 3rem 0;
+    }
+
+    .talk__podcast_text {
+        padding: 0;
+        line-height: 140%;
+    }
+
+
+    .talk__platforms_wrapper {
+        width: 90%;
+    }
+
+    .talk__platform a img {
+        height: auto;
+    }
+
 }
 
 
