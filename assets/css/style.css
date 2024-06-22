@@ -2059,7 +2059,12 @@ button:hover{
 
 
 /* Extra small devices (up to 425px) */
-@media (max-width: 425px) {}
+@media (max-width: 400px) {
+
+    .lifestyle__sales_btn{
+        margin-top: 1rem;
+    }
+}
 
 
 
