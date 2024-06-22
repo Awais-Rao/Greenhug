@@ -134,7 +134,7 @@
                             muchos artistas nos apoyaron con nuestra causa.</p>
 
                         <div class="year__data_image-wrapper">
-                            <img class="year__data_image img-fluid bg-danger" src="assets/images/2018-image.jpg" alt="">
+                            <img class="year__data_image img-fluid " src="assets/images/2018-image.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,7 @@
                     <div class="container-fluid year__data_wrapper">
 
                         <div class="year__data_image-wrapper">
-                            <img class="year__data_image img-fluid bg-danger" src="assets/images/2018-image.jpg" alt="">
+                            <img class="year__data_image img-fluid " src="assets/images/2018-image.jpg" alt="">
                         </div>
 
                     </div>
@@ -159,7 +159,7 @@
                     <div class="container-fluid year__data_wrapper">
 
                         <div class="year__data_image-wrapper">
-                            <img class="year__data_image img-fluid bg-danger" src="assets/images/2018-image.jpg" alt="">
+                            <img class="year__data_image img-fluid " src="assets/images/2018-image.jpg" alt="">
                         </div>
 
                         <p class="year__data_text">Lanzamos nuestra primera colección. Ropa de bambú, algodón orgánico y
@@ -168,7 +168,7 @@
                             muchos artistas nos apoyaron con nuestra causa.</p>
 
                         <div class="year__data_image-wrapper">
-                            <img class="year__data_image img-fluid bg-danger" src="assets/images/2018-image.jpg" alt="">
+                            <img class="year__data_image img-fluid " src="assets/images/2018-image.jpg" alt="">
                         </div>
 
                         <p class="year__data_text">Lanzamos nuestra primera colección. Ropa de bambú, algodón orgánico y
@@ -192,7 +192,7 @@
                             muchos artistas nos apoyaron con nuestra causa.</p>
 
                         <div class="year__data_image-wrapper">
-                            <img class="year__data_image img-fluid bg-danger" src="assets/images/2018-image.jpg" alt="">
+                            <img class="year__data_image img-fluid " src="assets/images/2018-image.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -242,7 +242,7 @@
                             muchos artistas nos apoyaron con nuestra causa.</p>
 
                         <div class="year__data_image-wrapper">
-                            <img class="year__data_image img-fluid bg-danger" src="assets/images/2018-image.jpg" alt="">
+                            <img class="year__data_image img-fluid " src="assets/images/2018-image.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -338,5 +338,54 @@
     });
 
 </script>
+
+<script>
+   
+   document.addEventListener("DOMContentLoaded", function() {
+    // Get all elements with the class history__year
+    const yearLinks = document.querySelectorAll('.history__year');
+
+    // Add a click event listener to each element
+    yearLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            // Prevent default action (navigation)
+            event.preventDefault();
+
+            // Remove active class from all links
+            yearLinks.forEach(item => item.classList.remove('active'));
+
+            // Add active class to the clicked link
+            this.classList.add('active');
+
+            // Get the ID of the content to show (from href attribute)
+            const targetId = this.getAttribute('href').replace('#', '');
+
+            // Get the tab-content element
+            const tabContent = document.querySelector('.tab-content');
+
+            // Find elements within tab-content that have the active or show class
+            const activeElements = tabContent.querySelectorAll('.active, .show');
+
+            // Remove the active and show classes from these elements
+            activeElements.forEach(element => {
+                element.classList.remove('active');
+                element.classList.remove('show');
+            });
+
+            // Find the target content to show
+            const targetContent = document.getElementById(targetId);
+
+            // Add active and show classes to the target content
+            if (targetContent) {
+                targetContent.classList.add('active');
+                targetContent.classList.add('show');
+            }
+        });
+    });
+});
+
+
+</script>
+
 
 </html>
