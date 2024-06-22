@@ -27,6 +27,12 @@
 
 
 
+    --history-year-font: 86px;
+    --history-header-text-font: 45px;
+    --history-year-text-font: 30px;
+
+
+
     /*========== Colors ==========*/
     --primary-color: #5C6A5D;
     --primary-dark-color: #39433A;
@@ -1326,6 +1332,86 @@
 
 
 
+/* =========================================== History ================================================= */
+
+.history_hero {
+    padding: 8rem 6rem;
+}
+
+.history__hero_data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.history__hero_heading {
+    text-align: center;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: var(--big-card-heading);
+    line-height: 87%;
+    width: 80%;
+}
+
+.history__hero_text {
+    font-size: var(--history-header-text-font);
+    line-height: 120%;
+    text-align: center;
+    color: #394149;
+    margin-top: 3rem;
+    width: 90%;
+}
+
+
+/* ---- history year ----- */
+
+.history__year {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+
+    width: 18%;
+    font-size: var(--history-year-font);
+    color: #DDD2C0;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+}
+
+.history__year.swiper-slide-active {
+    color: var(--primary-dark-color) !important;
+}
+
+
+/* ------ year data ------ */
+
+.year__data_text {
+    color: #9795B5;
+    text-align: center;
+    font-size: var(--history-year-text-font);
+    line-height: 140%;
+}
+
+.year__data_image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.year__data_image {
+    max-height: 750px;
+    margin: 1rem 0;
+}
+
+
+
+
+
 
 
 
@@ -1437,6 +1523,11 @@
         --ranking-heading-font: 35px;
         --ranking-year-font: 85px;
         --ranking-paragraph-font: 17px;
+
+        --history-year-font: 45px;
+        --history-header-text-font: 45px;
+        --history-year-text-font: 30px;
+
 
     }
 
@@ -1769,6 +1860,8 @@
     }
 
     /* ===== Talks ===== */
+
+
     .talk__hero {
         padding: 5rem 2rem;
     }
@@ -1813,6 +1906,42 @@
         height: auto;
     }
 
+
+
+
+    /* ===== History ====== */
+
+    .history_hero {
+        padding: 4rem 2rem;
+    }
+
+    .history__hero_heading {
+        text-align: left;
+        font-size: var(--big-card-heading);
+        line-height: 87%;
+        width: 100%;
+    }
+
+    .history__hero_text {
+        font-size: var(--medium-heading-font);
+        text-align: left;
+        width: 100%;
+    }
+
+    .history__year {
+        width: 50%;
+    }
+
+    .year__data_text {
+        text-align: left;
+        font-size: var(--medium-heading-font);
+        line-height: 140%;
+        margin: 1rem 0;
+    }
+    .year__data_image {
+        max-height: 420px;
+        margin: 1rem 0;
+    }
 }
 
 
