@@ -387,6 +387,9 @@ button:hover {
     align-items: center;
 }
 
+.btn{
+    text-decoration: none !important;
+}
 .header_btn {
     font-size: var(--section-subtitle-font);
     border-radius: 500px;
@@ -1599,35 +1602,40 @@ button:hover {
 
 /* --------- upscaling steps -------- */
 
-.step__cards_data{
+.step__cards_data {
     padding-bottom: 20rem;
 }
 
 .step__card_1 {
     background: #839599;
 }
+
 .step__card_2 {
     background: #748586;
 }
+
 .step__card_3 {
     background: #657473;
 }
+
 .step__card_4 {
     background: #576460;
 }
+
 .step__card_5 {
     background: #48534d;
 }
+
 .step__card_6 {
     background: #39433a;
 }
 
 
-.step__cards_container{
+.step__cards_container {
     width: 70%;
-    /* background: red; */
 }
-.step__card_wrapper:nth-child(even){
+
+.step__card_wrapper:nth-child(even) {
     transform: translateY(60%) !important;
 }
 
@@ -1679,11 +1687,32 @@ button:hover {
     font-size: var(--medium-heading-font);
     text-align: center;
     margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 .step__card_text {
     font-size: var(--paragraph-font);
 }
+
+
+/* --------- Upscaling Projects cards ------------------- */
+
+.upscaling__project_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: #C4C4C4;
+    border-radius: 25px;
+    min-height: 350px;
+
+}
+
+
+
+
+
 
 
 
@@ -1810,6 +1839,8 @@ button:hover {
         --history-year-font: 45px;
         --history-header-text-font: 45px;
         --history-year-text-font: 30px;
+
+        --step-card-font: 100px;
 
 
     }
@@ -2245,8 +2276,94 @@ button:hover {
 
 
 
+    /* =========== Upscaling ============= */
+
+    .upscaling__hero {
+        padding: 2rem 1rem;
+    }
+
+    .upscaling__hero_img {
+        width: 150px;
+        margin: 2rem 0;
+    }
+
+    .upscaling__hero_text {
+        text-align: left;
+        width: 100%;
+        padding: 0 .5rem;
+    }
+
+    .upscaling_btn {
+        margin: 2rem 0;
+    }
+
+    .upscaling__result_card {
+        margin-bottom: 1.5rem;
+    }
 
 
+    .step__cards_data {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 10rem;
+    }
+
+    .step__cards_container {
+        width: 100%;
+    }
+
+    .step__card_wrapper{
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+    .step__card {
+        margin: 3rem 0;
+        padding: 1rem .5rem .3rem;
+    }
+
+    .step__card_wrapper:nth-child(even) {
+        transform: translateY(50%) !important;
+    }
+
+
+    .step__card_number {
+        transform: translate(-55%, -50%);
+        text-shadow:
+            5px 0 0 white,
+            -5px 0 0 white,
+            0 5px 0 white,
+            0 -5px 0 white,
+            5px 5px 0 white,
+            -5px -5px 0 white,
+            5px -5px 0 white,
+            -5px 5px 0 white;
+    }
+
+    .step__card_data {
+        width: 80%;
+    }
+    .step__card_icon {
+        font-size: var(--header-heading-font);
+        margin-bottom: 0.3em;
+        line-height: 95%;
+    }
+
+    .step__card_heading {
+        font-size: var(--medium-heading-font);
+        text-align: center;
+        margin-bottom: .5rem;
+    }
+
+    .step__card_text {
+        font-size: 10px;
+    }
+
+    .upscaling__project_card {
+        min-height: 300px;    
+    }
+    .upscaling__project_card-wrapper{
+        margin-bottom: 1.5rem;
+    }
 
 }
 
