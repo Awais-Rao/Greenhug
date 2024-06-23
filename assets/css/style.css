@@ -413,7 +413,7 @@ button:hover {
     overflow: hidden;
     display: flex;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .hero__section::after {
