@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener('scroll', function () {
 
-        window.scrollY > 400 ? Navbar.classList.add('fixed-top', 'shadow') : Navbar.classList.remove('fixed-top', 'shadow');
+        window.scrollY > 300 ? Navbar.classList.add('fixed-top', 'shadow') : Navbar.classList.remove('fixed-top', 'shadow');
 
     });
 });
