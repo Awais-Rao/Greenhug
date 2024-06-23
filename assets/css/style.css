@@ -57,6 +57,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: DMSans-Regular;
+    scroll-behavior: smooth;
 }
 
 
@@ -387,9 +388,10 @@ button:hover {
     align-items: center;
 }
 
-.btn{
+.btn {
     text-decoration: none !important;
 }
+
 .header_btn {
     font-size: var(--section-subtitle-font);
     border-radius: 500px;
@@ -1044,7 +1046,7 @@ button:hover {
 }
 
 .experience__number_data {
-    width: 100%;
+    width: 80%;
 }
 
 .experience__number_heading {
@@ -2146,6 +2148,10 @@ button:hover {
         width: 100% !important;
     }
 
+    .experience__number_data {
+        width: 100%;
+    }
+
     .experience__gallery_image {
         height: 180px;
     }
@@ -2312,10 +2318,11 @@ button:hover {
         width: 100%;
     }
 
-    .step__card_wrapper{
+    .step__card_wrapper {
         padding-left: .5rem;
         padding-right: .5rem;
     }
+
     .step__card {
         margin: 3rem 0;
         padding: 1rem .5rem .3rem;
@@ -2342,6 +2349,7 @@ button:hover {
     .step__card_data {
         width: 80%;
     }
+
     .step__card_icon {
         font-size: var(--header-heading-font);
         margin-bottom: 0.3em;
@@ -2359,9 +2367,10 @@ button:hover {
     }
 
     .upscaling__project_card {
-        min-height: 300px;    
+        min-height: 300px;
     }
-    .upscaling__project_card-wrapper{
+
+    .upscaling__project_card-wrapper {
         margin-bottom: 1.5rem;
     }
 
