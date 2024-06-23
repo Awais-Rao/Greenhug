@@ -2080,7 +2080,10 @@ button:hover {
     }
 
     .goal__card_data {
-        padding: 3rem;
+        padding: 3rem 2.5rem;
+    }
+    .goal__title{
+        margin-left: 1rem;
     }
 
     /* =================== History ================= */
