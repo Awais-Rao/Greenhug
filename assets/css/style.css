@@ -48,6 +48,12 @@
     --footer-color: #5F8863;
 
 
+    --hue-color: 120; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 62%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+
+
 
 }
 
@@ -170,10 +176,24 @@ button:hover {
 }
 
 
+/*========== SCROLL BAR ==========*/
+::-webkit-scrollbar{
+    width: .60rem;
+    border-radius: .5rem;
+    background-color: var(--scroll-bar-color);
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: var(--scroll-thumb-color);
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background-color: var(--text-color-light);
+  }
 
 
 
-/* ---------- Navbar ---------- */
+
+/* ========== Navbar ========== */
 .navbar {
     background-color: var(--primary-color);
 }
@@ -597,7 +617,7 @@ button:hover {
 /* ----- Testimonial ----- */
 .testimonial__cards_wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .card__wrapper {
