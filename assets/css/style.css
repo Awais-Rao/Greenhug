@@ -26,7 +26,6 @@
     --ranking-paragraph-font: 28px;
 
 
-
     --history-year-font: 86px;
     --history-header-text-font: 45px;
     --history-year-text-font: 30px;
@@ -48,7 +47,8 @@
     --footer-color: #5F8863;
 
 
-    --hue-color: 120; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 120;
+    /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 62%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
@@ -151,7 +151,8 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--primary-color); /* or any background color you prefer */
+    background: var(--primary-color);
+    /* or any background color you prefer */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,32 +164,41 @@ button:hover {
 .spinner {
     width: 50px;
     height: 50px;
-    border: 5px solid #f3f3f3; /* Light grey */
-    border-top: 5px solid var(--primary-dark-color); /* Blue */
+    border: 5px solid #f3f3f3;
+    /* Light grey */
+    border-top: 5px solid var(--primary-dark-color);
+    /* Blue */
     border-radius: 50%;
     animation: spin 1s reverse infinite;
 }
 
 /* Spinner animation */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(-360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
 
 /*========== SCROLL BAR ==========*/
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: .60rem;
     border-radius: .5rem;
     background-color: var(--scroll-bar-color);
-  }
-  ::-webkit-scrollbar-thumb{
+}
+
+::-webkit-scrollbar-thumb {
     border-radius: .5rem;
     background-color: var(--scroll-thumb-color);
-  }
-  ::-webkit-scrollbar-thumb:hover{
+}
+
+::-webkit-scrollbar-thumb:hover {
     background-color: var(--text-color-light);
-  }
+}
 
 
 
@@ -1398,7 +1408,6 @@ button:hover {
 .talk__platforms_wrapper {
     width: 60%;
     margin: 0 auto;
-
 }
 
 .talk__platform {
@@ -1657,6 +1666,7 @@ button:hover {
 
 .result__card_text {
     font-size: var(--header-paragraph-font);
+    text-align: center;
 }
 
 
@@ -1979,6 +1989,61 @@ button:hover {
 /* Large devices (up to 992px) */
 @media (max-width: 992px) {
 
+    :root {
+
+        /*========== Font and typography ==========*/
+        --navbar-font: 14px;
+        --header-heading-font: 46px;
+        --header-subheading-font: 32px;
+        --header-paragraph-font: 22px;
+        --section-title-font: 42px;
+        --section-subtitle-font: 19px;
+        --paragraph-font: 17.8px;
+        --large-heading-font: 26px;
+        --medium-heading-font: 24px;
+        --big-card-heading: 52px;
+
+        --ranking-heading-font: 40px;
+        --ranking-year-font: 100px;
+        --ranking-paragraph-font: 22px;
+
+
+        --history-year-font: 60px;
+        --history-header-text-font: 40px;
+        --history-year-text-font: 30px;
+
+        --step-card-font: 140px;
+
+        --individual-ranking-font: 80px;
+
+    }
+
+    /*=============== REUSABLE CSS CLASSES ===============*/
+
+
+    .hero {
+        padding: 9rem 4rem;
+    }
+
+    .section {
+        padding: 5rem 4rem;
+    }
+
+    .section__head {
+        padding: 5rem 4rem 0;
+    }
+
+    .section__data {
+        padding: 3rem 4rem 5rem;
+    }
+
+    .section_subtitle {
+        width: 80%;
+    }
+
+
+    /* ------ Navbar ------- */
+
     .navbar {
         padding: 1rem 1rem;
     }
@@ -1986,12 +2051,228 @@ button:hover {
     .navbar-nav {
         gap: 0px;
     }
+
+    /*=============== Home Page ===============*/
+
+    .header_btn {
+        padding: .7rem 1.4rem;
+    }
+
+    .number__card .number_card_text {
+        text-align: center;
+    }
+
+    .number__card {
+        padding: 2rem 1rem;
+    }
+
+    .number__card_big-wrapper {
+        margin-bottom: 2rem;
+    }
+
+    .number__card_big {
+        padding: 4rem 5rem;
+    }
+
+    .number__card svg {
+        height: 100px;
+        width: 100%;
+    }
+
+    .goal__card_data {
+        padding: 3rem;
+    }
+
+    /* =================== History ================= */
+
+    .history_hero {
+        padding: 6rem 4rem;
+    }
+
+    .history__hero_heading {
+        width: 85%;
+    }
+
+    .history__hero_text {
+        width: 100%;
+        line-height: 110%;
+    }
+
+    /* =================== Experience ================= */
+
+    .experience__hero_title {
+        padding: 0 3rem;
+    }
+
+    .experience__number_number_wrapper {
+        padding: .5rem .5rem;
+    }
+
+    .monitoring__heading {
+        font-size: var(--ranking-heading-font);
+    }
+
+    .monitoring__paragraph {
+        line-height: 130%;
+    }
+
+    .monitoring__bottom_heading {
+        font-size: var(--header-subheading-font);
+    }
+
+    /* ============= Talks ============= */
+
+    .talk__hero {
+        padding: 6rem 4rem;
+    }
+
+    .talk__hero_text {
+        width: 90%;
+    }
+
+    .talk__environment_image {
+        margin: 3rem 2rem;
+    }
+
+    .talk__platforms_wrapper {
+        width: 80%;
+    }
+
+    /* ============= Life Style ============= */
+
+    .lifestyle__header_data {
+        width: 80%;
+    }
+
+    /* ============= Upscaling ============= */
+
+    .upscaling__hero {
+        padding: 2rem;
+    }
+
+    .upscaling__hero_text {
+        width: 90%;
+    }
+
+    .result__card_image {
+        height: 90px;
+    }
+
+    .step__cards_data {
+        padding-bottom: 15rem;
+    }
+
+    .step__cards_container {
+        width: 90%;
+    }
+
+    .step__card {
+        margin: 3rem 2rem;
+    }
+
+    .step__card_number {
+        text-shadow:
+            6px 0 0 white,
+            -6px 0 0 white,
+            0 6px 0 white,
+            0 -6px 0 white,
+            6px 6px 0 white,
+            -6px -6px 0 white,
+            6px -6px 0 white,
+            -6px 6px 0 white;
+    }
+
+    .step__card_data {
+        width: 75%;
+    }
+
+    .step__card_text {
+        font-size: 16px;
+    }
+
+    .upscaling__project_card-wrapper {
+        margin-bottom: 2rem;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /* Medium devices (up to 768px) */
 @media (max-width: 768px) {
+
+
+    :root {
+
+        /*========== Font and typography ==========*/
+        /* --navbar-font: 14px;
+        --header-heading-font: 46px;
+        --header-subheading-font: 32px;
+        --header-paragraph-font: 22px;
+        --section-title-font: 42px;
+        --section-subtitle-font: 19px;
+        --paragraph-font: 17.8px;
+        --large-heading-font: 26px;*/
+        --medium-heading-font: 20px;
+        --big-card-heading: 45px;
+
+        /* --ranking-heading-font: 40px;
+        --ranking-year-font: 100px;
+        --ranking-paragraph-font: 22px;
+
+
+        --history-year-font: 60px;
+        --history-header-text-font: 40px;
+        --history-year-text-font: 30px;
+
+        --step-card-font: 170px;
+
+        --individual-ranking-font: 80px; */
+
+    }
+
+    /*=============== REUSABLE CSS CLASSES ===============*/
+
+
+    .hero {
+        padding: 9rem 4rem;
+    }
+
+    .section {
+        padding: 4rem 3rem;
+    }
+
+    .section__head {
+        padding: 4rem 3rem 0;
+    }
+
+    .section__data {
+        padding: 3rem 3rem 4rem;
+    }
+
+    .section_subtitle {
+        width: 90%;
+    }
+
+
+
+
+
+
 
     .navbar {
         padding: 1rem 2rem;
@@ -2013,11 +2294,123 @@ button:hover {
         gap: 10px;
     }
 
-    /* ------ monitoring section ----- */
+    /* ------ Experience ----- */
+
+    .experience__hero_title {
+        padding: 0 2rem;
+    }
+
+    .experience__number_container:nth-child(1) {
+        margin-top: 2rem;
+    }
+
     .monitoring__img_wrapper {
         height: 450px;
     }
 
+
+    .number__card_wrapper {
+        margin-bottom: 2rem;
+    }
+
+    .number__card .number_card_text {
+        margin-top: 1rem;
+    }
+
+
+
+    .talk__environment_point {
+        justify-content: start;
+        margin-bottom: 1rem;
+    }
+
+    .talk__environment_image {
+        margin: 3rem 0rem;
+    }
+
+    .talk__podcast_text {
+        line-height: 150%;
+        padding: 0 2rem;
+    }
+
+    .talk__platforms_wrapper {
+        width: 90%;
+    }
+
+    .talk__platform a img {
+        height: 80px;
+    }
+
+    .lifestyle__header_data {
+        width: 100%;
+    }
+
+    .lifestyle__image_wrapper {
+        height: 500px;
+    }
+
+    .upscaling__result_card-wrapper {
+        margin-bottom: 1rem;
+    }
+
+
+
+
+
+    .step__cards_data {
+        padding-bottom: 18rem;
+    }
+
+    .step__cards_container {
+        width: 100%;
+    }
+
+    .step__card {
+        margin: 2rem 1rem;
+    }
+
+    .step__card_wrapper:nth-child(even) {
+        transform: translateY(50%) !important;
+    }
+
+    .step__card_data {
+        width: 75%;
+    }
+
+    .step__card_text {
+        font-size: 16px;
+    }
+
+    /* ------individual ranking ------- */
+
+    .individual__impact_section-data {
+        padding: 3rem 0 0rem;
+    }
+
+    .individual__impact_card {
+        padding: 1rem 2rem;
+        margin: 0 0 2rem;
+        height: auto;
+    }
+
+    .individual__impact_card-big {
+        height: auto;
+        margin: 0 0 2rem;
+        font-size: var(--ranking-heading-font);
+        text-align: left;
+        line-height: 100%;
+    }
+
+    .individual__impact_card svg {
+        height: 70px;
+    }
+
+    .individual__impact_card-big svg {
+        height: 120px;
+    }
+    .simple__impact_card-wrapper{
+        margin-bottom: 1.2rem;
+    }
 
 }
 
@@ -2054,8 +2447,9 @@ button:hover {
         --ranking-year-font: 85px;
         --ranking-paragraph-font: 17px;
 
+
         --history-year-font: 45px;
-        --history-header-text-font: 45px;
+        --history-header-text-font: 40px;
         --history-year-text-font: 30px;
 
         --step-card-font: 100px;
@@ -2595,6 +2989,7 @@ button:hover {
 
 
     /* -------------- Individual ranking ----------- */
+    
     .individual__hero {
         padding-top: 7rem;
         padding-bottom: 0rem;
