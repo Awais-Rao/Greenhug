@@ -185,6 +185,7 @@ button:hover {
 
 
 /*========== SCROLL BAR ==========*/
+
 ::-webkit-scrollbar {
     width: .60rem;
     border-radius: .5rem;
@@ -204,6 +205,7 @@ button:hover {
 
 
 /* ========== Navbar ========== */
+
 .navbar {
     background-color: var(--primary-color);
 }
@@ -249,8 +251,8 @@ button:hover {
 }
 
 
-
 /* ----- Navbar Toggler ----- */
+
 .custom-toggler.navbar-toggler {
     border: none;
     outline: none;
@@ -278,6 +280,7 @@ button:hover {
 
 
 /* ----- Footer ----- */
+
 .footer__icons_wrapper {
     display: flex;
     align-items: center;
@@ -312,16 +315,6 @@ button:hover {
     text-align: center;
     color: var(--white-color);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -370,6 +363,8 @@ button:hover {
     color: var(--white-color);
 }
 
+/* --------- Footer meida Queries ---------- */
+
 @media (min-width: 768px) {
     .footer__upper {
         grid-template-columns: 1fr 2fr 1fr;
@@ -401,7 +396,11 @@ button:hover {
 
 
 
-/* ========== Home ========== */
+/* ========================================================== Home ================================================================= */
+
+
+
+
 
 /* ----- Header ----- */
 
@@ -693,7 +692,7 @@ button:hover {
 /* ----- Goals ----- */
 .goal__swiper_wrapper {
     display: flex;
-    margin-top: -2rem;
+    margin-top: -1rem;
     /*============== Must Change it when required ===============*/
 }
 
@@ -824,7 +823,8 @@ button:hover {
 
 
 
-/* =========================================== Ranking Page ===================================== */
+/* ========================================================= Ranking Page =============================================================== */
+
 
 .ranking__header_section {
     background-image: url('../images/ranking-header-bg.jpg');
@@ -1946,16 +1946,9 @@ button:hover {
 
 
 
+/* ========================================== Media Queries ================================================== */
 
 
-
-
-
-
-
-
-
-/* ========== Media Queries ========== */
 
 
 /* Extra large devices (up to 1200px) */
@@ -1975,8 +1968,6 @@ button:hover {
         --big-card-heading: 62px;
 
     }
-
-
 
     .navbar {
         padding: 1rem 5rem;
@@ -2206,15 +2197,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
-
-
 /* Medium devices (up to 768px) */
 @media (max-width: 768px) {
 
@@ -2222,29 +2204,9 @@ button:hover {
     :root {
 
         /*========== Font and typography ==========*/
-        /* --navbar-font: 14px;
-        --header-heading-font: 46px;
-        --header-subheading-font: 32px;
-        --header-paragraph-font: 22px;
-        --section-title-font: 42px;
-        --section-subtitle-font: 19px;
-        --paragraph-font: 17.8px;
-        --large-heading-font: 26px;*/
+
         --medium-heading-font: 20px;
         --big-card-heading: 45px;
-
-        /* --ranking-heading-font: 40px;
-        --ranking-year-font: 100px;
-        --ranking-paragraph-font: 22px;
-
-
-        --history-year-font: 60px;
-        --history-header-text-font: 40px;
-        --history-year-text-font: 30px;
-
-        --step-card-font: 170px;
-
-        --individual-ranking-font: 80px; */
 
     }
 
@@ -2271,17 +2233,12 @@ button:hover {
         width: 90%;
     }
 
-
-
-
-
-
-
     .navbar {
         padding: 1rem 2rem;
     }
 
     /* ----- Open Navbar Menu ----- */
+    
     .navbar-collapse {
         width: min-content !important;
         position: absolute;
@@ -2296,6 +2253,9 @@ button:hover {
         align-items: start;
         gap: 10px;
     }
+
+
+
 
     /* ------ Experience ----- */
 
@@ -2383,6 +2343,7 @@ button:hover {
     .step__card_text {
         font-size: 16px;
     }
+
 
     /* ------individual ranking ------- */
 
@@ -3067,22 +3028,9 @@ button:hover {
         margin-top: .5rem;
     }
 
-    /* .simple__impact_card-wrapper{
-        padding: 0 .2rem;
-        background: purple;
-    }
-    .simple__impact_card:nth-child(even){
-        padding-left: 0;
-    }
-    .simple__impact_card:nth-child(odd){
-        padding-right: 0;
-    } */
-
 
 
 }
-
-
 
 
 
@@ -3097,38 +3045,3 @@ button:hover {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* @media screen and (max-width: 768px) {
-
-    .navbar {
-        padding: .5rem 1rem;
-    }
-
-    .navbar-collapse {
-        width: min-content !important;
-        position: absolute;
-        right: 0;
-        top: 100%;
-        background-color: var(--primary);
-        padding: .5rem 1.5rem 1rem;
-    }
-
-    .navbar-nav {
-        align-items: start;
-        gap: 10px;
-    }
-
-
-
-
-} */
