@@ -815,10 +815,6 @@ button:hover {
     padding: 1rem;
 }
 
-.partner__logo {
-    /* max-height: 100px; */
-    /* height: 100%; */
-}
 
 
 
@@ -1638,10 +1634,6 @@ button:hover {
 
 .result__section_title span {
     color: var(--primary-dark-color);
-}
-
-.upscaling__result_card-wrapper {
-    /* padding: 6rem; */
 }
 
 .upscaling__result_card {
