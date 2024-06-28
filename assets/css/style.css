@@ -1825,6 +1825,7 @@ button:hover {
 }
 
 .individual__company_ranking {
+    margin-top: 3rem;
     color: var(--primary-dark-color);
     font-weight: bolder;
     font-size: var(--individual-ranking-font);
@@ -2139,57 +2140,65 @@ button:hover {
     }
 
     /* ============= Upscaling ============= */
-
+    
     .upscaling__hero {
         padding: 2rem;
     }
-
+    
     .upscaling__hero_text {
         width: 90%;
     }
-
+    
     .result__card_image {
         height: 90px;
     }
-
+    
     .step__cards_data {
         padding-bottom: 15rem;
     }
-
+    
     .step__cards_container {
         width: 90%;
     }
-
+    
     .step__card {
         margin: 3rem 2rem;
     }
-
+    
     .step__card_number {
         text-shadow:
-            6px 0 0 white,
-            -6px 0 0 white,
-            0 6px 0 white,
-            0 -6px 0 white,
-            6px 6px 0 white,
+        6px 0 0 white,
+        -6px 0 0 white,
+        0 6px 0 white,
+        0 -6px 0 white,
+        6px 6px 0 white,
             -6px -6px 0 white,
             6px -6px 0 white,
             -6px 6px 0 white;
+        }
+        
+        .step__card_data {
+            width: 75%;
+        }
+        
+        .step__card_text {
+            font-size: 16px;
+        }
+        
+        .upscaling__project_card-wrapper {
+            margin-bottom: 2rem;
+        }
+
+
+
+        /* ============= Upscaling ============= */
+
+        .individual__company_ranking{
+            margin-top: 3rem;
+        }
     }
-
-    .step__card_data {
-        width: 75%;
-    }
-
-    .step__card_text {
-        font-size: 16px;
-    }
-
-    .upscaling__project_card-wrapper {
-        margin-bottom: 2rem;
-    }
-}
-
-
+    
+    
 
 
 
@@ -2346,6 +2355,10 @@ button:hover {
 
 
     /* ------individual ranking ------- */
+
+    .individual__company_ranking{
+        margin-top: 3rem;
+    }
 
     .individual__impact_section-data {
         padding: 3rem 0 0rem;

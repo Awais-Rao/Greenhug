@@ -50,7 +50,7 @@ sr.reveal(`.ranking__points_bar`, { origin: "left", interval: 200 });
 
 
   // Check the screen width and add animation on large screens only
-  if (window.innerWidth >= 576) {
+  if (window.innerWidth >= 992) {
 
     sr.reveal(`.goal__card`);
     sr.reveal(`.card__wrapper`, { interval: 300, distance: "100px" });
