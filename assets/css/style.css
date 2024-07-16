@@ -534,6 +534,10 @@ button:hover {
     text-align: right;
 }
 
+.project_card .sub_heading span {
+    visibility: hidden;
+}
+
 
 /* ----- Number Impact ----- */
 
@@ -764,43 +768,43 @@ button:hover {
 
 
 .goal__swiper_btn-wrapper {
-    margin-top: 3rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+    margin-top: 3rem !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 40px !important;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 64px;
-    width: 64px;
-    border-radius: 500px;
-    border: 1px solid #D4D2E3;
-    background: var(--primary-dark-color);
-    font-size: 20px;
-    cursor: pointer;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    height: 64px !important;
+    width: 64px !important;
+    border-radius: 500px !important;
+    border: 1px solid #D4D2E3 !important;
+    background: var(--primary-dark-color) !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
     color: var(--white-color);
-    font-size: 25px;
-    font-family: 'remixicon';
-    transform: translate(0%, 0%);
+    font-size: 25px !important;
+    font-family: 'remixicon' !important;
+    transform: translate(0%, 0%) !important;
 }
 
 .swiper-button-next::after {
-    content: '\EA6C';
+    content: '\EA6C' !important;
 }
 
 .swiper-button-prev::after {
-    content: '\EA60';
+    content: '\EA60' !important;
 }
 
 
@@ -1233,8 +1237,8 @@ button:hover {
 .monitoring__bottom_heading {
     font-size: var(--section-title-font);
     color: var(--primary-dark-color);
-    text-decoration: underline;
-    text-align: center;
+    text-decoration: underline !important;
+    text-align: center; 
     font-weight: 700;
 }
 
