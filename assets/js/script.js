@@ -16,13 +16,39 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", function () {
     let preloader = document.getElementById("preloader");
     preloader.style.opacity = "0";
-
+    
     // Once the preloader is fully faded out, remove it from the DOM
     setTimeout(function () {
       preloader.style.display = "none";
     }, 500);
   });
 });
+
+
+
+// ========= Testimonial Cards Height ========
+
+
+const cardWrappers = document.querySelectorAll('.card__wrapper');
+
+let maxHeight = 0;
+
+cardWrappers.forEach(cardWrapper => {
+
+    cardWrapper.style.height = 'auto';
+    
+    const wrapperHeight = cardWrapper.offsetHeight;
+
+    if (wrapperHeight > maxHeight) {
+        maxHeight = wrapperHeight;
+    }
+});
+
+cardWrappers.forEach(cardWrapper => {
+    cardWrapper.style.minHeight = `${maxHeight}px`;
+});
+
+
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
@@ -62,3 +88,8 @@ sr.reveal(`.ranking__points_bar`, { origin: "left", interval: 200 });
 // --------- Footer ---------
 
 // sr.reveal(`.footer__upper, .footer__line, .footer__bottom`);
+
+
+
+
+

@@ -264,7 +264,7 @@ button:hover {
 }
 
 .navbar-collapse {
-    z-index: 99999999;
+    z-index: 99;
 }
 
 /* ----- Fixed Navbar ----- */
@@ -477,7 +477,78 @@ button:hover {
 }
 
 
+/* ----- Contact Modal ----- */
 
+.modal-backdrop {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+}
+
+.modal-backdrop.show {
+    opacity: 0.85;
+}
+
+.modal-content {
+    background: var(--primary-color) !important;
+    border-radius: 15px !important;
+    color: var(--white-color);
+}
+
+.contact__modal_footer,
+.contact__modal_header {
+    border: none !important;
+}
+
+.contact__modal_header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+}
+
+.contact__modal_close {
+    position: absolute !important;
+    right: 1.5em !important;
+    top: 1.2em !important;
+    filter: invert(1) !important;
+}
+
+.contact__modal_body .form-label {
+    margin-bottom: 0.2rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5) !important;
+}
+
+.contact__modal_body input,
+.contact__modal_select,
+.contact__modal_body textarea {
+    background: var(--primary-dark-color) !important;
+    outline: var(--primary-dark-color) !important;
+    border: var(--primary-dark-color) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.contact__modal_body input::placeholder,
+.contact__modal_select::placeholder,
+.contact__modal_body textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.contact__modal_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+}
+
+
+.contact__modal_button {
+    background: var(--white-color) !important;
+    color: var(--primary-color) !important;
+    width: 94%;
+}
 
 /* ----- Projects ----- */
 
@@ -637,6 +708,7 @@ button:hover {
     padding: 1rem 0.5rem;
     height: 100%;
     display: flex;
+    flex-direction: column;
 }
 
 .testimonial__card {
@@ -648,6 +720,10 @@ button:hover {
     border: 1px solid #D4D2E3;
     overflow: hidden;
     box-shadow: 0px 3.75px 18.77px 0px #00000040;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* Make sure it takes up the remaining space */
 }
 
 .testimonial__card .testimonial__img_wrapper {
@@ -666,10 +742,16 @@ button:hover {
     object-position: center;
 }
 
+
 .testimonial__data {
     padding: 1.5rem 2rem;
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    /* Allow this section to grow and fill the remaining space */
 }
+
 
 .testimonial__text {
     font-size: var(--paragraph-font);
@@ -719,8 +801,11 @@ button:hover {
     justify-content: center;
     overflow: hidden;
     height: 100%;
-    background: #BF8C2C;
+    background-color: #BF8C2C;
     padding: 4rem 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .goal__card_img {
@@ -739,9 +824,25 @@ button:hover {
     padding: 4rem 6rem;
 }
 
+.goal__icon_wrapper {
+    display: flex;
+    /* color: var(--gold-color); */
+    align-items: center;
+    justify-content: center;
+}
+
+.goal__icon_wrapper i {
+    text-align: center;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    font-size: var(--big-card-heading);
+    line-height: 90%;
+}
+
 .goal__title_wrapper {
     display: flex;
-    color: var(--gold-color);
+    /* color: var(--gold-color); */
     align-items: center;
 }
 
@@ -1238,7 +1339,7 @@ button:hover {
     font-size: var(--section-title-font);
     color: var(--primary-dark-color);
     text-decoration: underline !important;
-    text-align: center; 
+    text-align: center;
     font-weight: 700;
 }
 
@@ -2070,7 +2171,8 @@ button:hover {
     .goal__card_data {
         padding: 3rem 2.5rem;
     }
-    .goal__title{
+
+    .goal__title {
         margin-left: 1rem;
     }
 
@@ -2136,65 +2238,65 @@ button:hover {
     }
 
     /* ============= Upscaling ============= */
-    
+
     .upscaling__hero {
         padding: 2rem;
     }
-    
+
     .upscaling__hero_text {
         width: 90%;
     }
-    
+
     .result__card_image {
         height: 90px;
     }
-    
+
     .step__cards_data {
         padding-bottom: 15rem;
     }
-    
+
     .step__cards_container {
         width: 90%;
     }
-    
+
     .step__card {
         margin: 3rem 2rem;
     }
-    
+
     .step__card_number {
         text-shadow:
-        6px 0 0 white,
-        -6px 0 0 white,
-        0 6px 0 white,
-        0 -6px 0 white,
-        6px 6px 0 white,
+            6px 0 0 white,
+            -6px 0 0 white,
+            0 6px 0 white,
+            0 -6px 0 white,
+            6px 6px 0 white,
             -6px -6px 0 white,
             6px -6px 0 white,
             -6px 6px 0 white;
-        }
-        
-        .step__card_data {
-            width: 75%;
-        }
-        
-        .step__card_text {
-            font-size: 16px;
-        }
-        
-        .upscaling__project_card-wrapper {
-            margin-bottom: 2rem;
-        }
-
-
-
-        /* ============= Upscaling ============= */
-
-        .individual__company_ranking{
-            margin-top: 3rem;
-        }
     }
-    
-    
+
+    .step__card_data {
+        width: 75%;
+    }
+
+    .step__card_text {
+        font-size: 16px;
+    }
+
+    .upscaling__project_card-wrapper {
+        margin-bottom: 2rem;
+    }
+
+
+
+    /* ============= Upscaling ============= */
+
+    .individual__company_ranking {
+        margin-top: 3rem;
+    }
+}
+
+
 
 
 
@@ -2243,7 +2345,7 @@ button:hover {
     }
 
     /* ----- Open Navbar Menu ----- */
-    
+
     .navbar-collapse {
         width: min-content !important;
         position: absolute;
@@ -2352,7 +2454,7 @@ button:hover {
 
     /* ------individual ranking ------- */
 
-    .individual__company_ranking{
+    .individual__company_ranking {
         margin-top: 3rem;
     }
 
@@ -2381,7 +2483,8 @@ button:hover {
     .individual__impact_card-big svg {
         height: 120px;
     }
-    .simple__impact_card-wrapper{
+
+    .simple__impact_card-wrapper {
         margin-bottom: 1.2rem;
     }
 
@@ -2962,7 +3065,7 @@ button:hover {
 
 
     /* -------------- Individual ranking ----------- */
-    
+
     .individual__hero {
         padding-top: 7rem;
         padding-bottom: 0rem;
@@ -3053,4 +3156,3 @@ button:hover {
         margin-top: 1rem;
     }
 }
-

@@ -78,23 +78,97 @@
         <section class="hero__section hero">
             <div class="container-fluid">
                 <div class="header__data">
-                    <h3 class="sub__heading">Tenemos una sola misión</h3>
-                    <h1 class="heading">Convertir a millones de personas en ambientalistas imperfectxs</h1>
+                    <h3 class="sub__heading">Tenemos una sola misión:</h3>
+                    <h1 class="heading">Convertir a millones de personas en ambientalistas imperfectos</h1>
                     <p class="paragraph">Desarrollando proyectos pro-ambientales a empresas e instituciones es nuestra
-                        mejor manera de lograrlo</p>
+                        mejor manera de lograrlo.</p>
                     <div class="button__wrapper">
                         <a href="#">
-                            <button class="btn header_btn start_btn me-3">Get started <i
+                            <button class="btn header_btn start_btn me-3" data-bs-toggle="modal"
+                                data-bs-target="#Contactpopup">Contacta un asesor <i
                                     class="ri-arrow-right-line"></i></button>
                         </a>
                         <a href="#">
-                            <button class="btn header_btn sales_btn">Talk to sales</button>
+                            <button class="btn header_btn sales_btn">Ir a tienda</button>
 
                         </a>
                     </div>
                 </div>
             </div>
+
+
+
+            <!-- Contact Modal -->
+            <div class="modal fade" id="Contactpopup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="ContactpopupLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered contact__modal modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header contact__modal_header pb-0">
+                            <h1 class="modal-title fs-3" id="ContactpopupLabel">Contacta un asesor</h1>
+                            <button type="button" class="btn-close contact__modal_close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body contact__modal_body py-0 px-md-4 px-2">
+                            <form action="#" method="post" class="container-fluid" enctype="multipart/form-data">
+                                <div class="mb-2">
+                                    <label for="name" class="form-label">Nombre :</label>
+
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="john"
+                                        required />
+                                </div>
+                                <div class="mb-2">
+                                    <label for="company" class="form-label">Empresa :</label>
+
+                                    <input type="text" name="company" id="company" class="form-control"
+                                        placeholder="Your Company" required />
+                                </div>
+                                <div class="mb-2">
+                                    <label for="email" class="form-label">Correo :</label>
+
+                                    <input type="email" name="email" id="email" class="form-control"
+                                        placeholder="john@company.com" required />
+                                </div>
+                                <div class="mb-2">
+                                    <label for="project" class="form-label">Proyecto :</label>
+
+                                    <select class="form-select contact__modal_select" name="project" id="project"
+                                        required>
+                                        <option selected>Select one</option>
+                                        <option value="experience">Experience</option>
+                                        <option value="talks">Talks</option>
+                                        <option value="lifestyle">Lifestyle</option>
+                                        <option value="upcycling">Upcycling</option>
+                                    </select>
+
+                                </div>
+                                <div class="mb-2">
+                                    <label for="email" class="form-label">Mensaje :</label>
+                                    <textarea class="form-control" name="message" id="message" rows="3"
+                                        placeholder="your mesage ...." required></textarea>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="" class="form-label">File : <sup><i>(Optional)</i></sup></label>
+                                    <input type="file" class="form-control" name="" id="" placeholder="" />
+                                </div>
+                        </div>
+
+                        <div class="modal-footer contact__modal_footer my-2">
+                            <button type="submit" class="btn contact__modal_button py-2">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </section>
+
+
+
+
+
+
 
     </header>
 
@@ -106,10 +180,6 @@
                 <div class="section__title">
                     Proyectos
                 </div>
-                <!-- <div class="section_subtitle">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac tellus
-                    libero accumsan.
-                </div> -->
             </div>
             <div class="section__data slide__section_data">
                 <div class="container-fluid swiper project_swiper">
@@ -168,9 +238,6 @@
             <div class="section__head">
                 <div class="section__title">
                     Nuestro Impacto en números
-                </div>
-                <div class="section_subtitle">
-                    Lorem ipsum dolor sit amet consectet adipiscing elit eget quamumto.
                 </div>
             </div>
             <div class="section__data slide__section_data">
@@ -272,10 +339,6 @@
                 <div class="section__title">
                     Testimonios
                 </div>
-                <div class="section_subtitle">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac tellus
-                    libero accumsan.
-                </div>
             </div>
             <div class="section__data slide__section_data">
                 <div class="container-fluid swiper testimonial_swiper">
@@ -309,7 +372,7 @@
                                 <div class="testimonial__data">
                                     <p class="testimonial__text">
                                         “Logramos plantar +500 árboles con 100 voluntarios, la logística estuvo
-                                        increible y fue un evento que disfrutamos todos”
+                                        increible y fue un evento que disfrutamos todos” awais is a developer who loves to code
                                     </p>
                                     <div class="testimonial__user_data">
                                         <p class="name">Lucia Muñoz González</p>
@@ -385,30 +448,104 @@
 
                                     <div class="row">
                                         <div class="col-md-5 col-12 m-0 p-0">
-                                            <div class="goal__card_img-wrapper">
-                                                <img class="img-fluid goal__card_img" src="assets/images/goal-img.png"
-                                                    alt="">
+                                            <div class="goal__card_img-wrapper"
+                                                style="background-image: url(assets/images/cloth-bg.png);">
                                             </div>
                                         </div>
                                         <div class="col-md-7 col-12 m-0 p-0">
                                             <div class="goal__card_data">
-                                                <div class="row goal__title_wrapper ">
+                                                <div class="row goal__title_wrapper" style="color: rgb(128, 0, 66);">
+                                                    <div class="goal__icon_wrapper">
+                                                        <!-- icon -->
+                                                        <i class="ri-bar-chart-grouped-line "></i>
+                                                    </div>
+                                                    <div class="col-1">
+                                                        <p class="goal__number">8</p>
+                                                    </div>
+                                                    <div class="col-11">
+                                                        <p class="goal__title">
+                                                            Trabajo decente y crecimiento económico
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="goal__description_wrapper">
+                                                    <p class="goal_description">
+                                                        Promover el crecimiento económico inclusivo y sostenible, el
+                                                        empleo pleno y productivo, y el trabajo decente para todos.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="goal__card swiper-slide container-fluid">
+
+                                    <div class="row">
+                                        <div class="col-md-5 col-12 m-0 p-0">
+                                            <div class="goal__card_img-wrapper"
+                                                style="background-image: url(assets/images/experience-gallery-img-4.jpg);">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 col-12 m-0 p-0">
+                                            <div class="goal__card_data">
+                                                <div class="row goal__title_wrapper" style="color: rgb(58, 128, 0);">
+                                                    <div class="goal__icon_wrapper">
+                                                        <!-- icon -->
+                                                        <i class="ri-eye-fill"></i>
+                                                    </div>
+                                                    <div class="col-1">
+                                                        <p class="goal__number">13</p>
+                                                    </div>
+                                                    <div class="col-11">
+                                                        <p class="goal__title">
+                                                            Acción por el clima
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="goal__description_wrapper">
+                                                    <p class="goal_description">
+                                                        Consumo y producción sostenibles, uso eficiente de los recursos,
+                                                        reducción de residuos y adopción de prácticas sostenibles.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="goal__card swiper-slide container-fluid">
+
+                                    <div class="row">
+                                        <div class="col-md-5 col-12 m-0 p-0">
+                                            <div class="goal__card_img-wrapper"
+                                                style="background-image: url(assets/images/plastic-bg.jpg);">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 col-12 m-0 p-0">
+                                            <div class="goal__card_data">
+                                                <div class="row goal__title_wrapper" style="color: #BF8C2C;">
+                                                    <div class="goal__icon_wrapper">
+                                                        <!-- icon -->
+                                                        <i class="ri-infinity-line"></i>
+                                                    </div>
                                                     <div class="col-1">
                                                         <p class="goal__number">12</p>
                                                     </div>
                                                     <div class="col-11">
                                                         <p class="goal__title">
-                                                            PRODUCCIÓN Y CONSUMO RESPONSABLE
+                                                            Consumo y producción responsable
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="goal__description_wrapper">
                                                     <p class="goal_description">
-                                                        Lorem ipsum dolor sit amet consectetur adipiscing elit ultrices
-                                                        scelerisque mi sed interdum lacus tellus in mi orc, netus nisl
-                                                        laoreet
-                                                        phasellus. Pellentesque non nunc placerat mi quis vitae cursus
-                                                        ornare.
+                                                        Consumo y producción sostenibles, uso eficiente de los recursos,
+                                                        reducción de residuos y adopción de prácticas sostenibles
                                                     </p>
                                                 </div>
                                             </div>
@@ -416,35 +553,36 @@
                                     </div>
 
                                 </div>
+
 
                                 <div class="goal__card swiper-slide container-fluid">
 
                                     <div class="row">
                                         <div class="col-md-5 col-12 m-0 p-0">
-                                            <div class="goal__card_img-wrapper">
-                                                <img class="img-fluid goal__card_img" src="assets/images/goal-img.png"
-                                                    alt="">
+                                            <div class="goal__card_img-wrapper"
+                                                style="background-image: url(assets/images/experience-gallery-img-1.jpg);">
                                             </div>
                                         </div>
                                         <div class="col-md-7 col-12 m-0 p-0">
                                             <div class="goal__card_data">
-                                                <div class="row goal__title_wrapper ">
+                                                <div class="row goal__title_wrapper" style="color: rgb(41, 41, 85)">
+                                                    <div class="goal__icon_wrapper">
+                                                        <!-- icon -->
+                                                        <i class="ri-flower-line"></i>
+                                                    </div>
                                                     <div class="col-1">
-                                                        <p class="goal__number">13</p>
+                                                        <p class="goal__number">17</p>
                                                     </div>
                                                     <div class="col-11">
                                                         <p class="goal__title">
-                                                            PRODUCCIÓN Y CONSUMO RESPONSABLE
+                                                            Alianzas para lograr los objetivos
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="goal__description_wrapper">
                                                     <p class="goal_description">
-                                                        Lorem ipsum dolor sit amet consectetur adipiscing elit ultrices
-                                                        scelerisque mi sed interdum lacus tellus in mi orc, netus nisl
-                                                        laoreet
-                                                        phasellus. Pellentesque non nunc placerat mi quis vitae cursus
-                                                        ornare.
+                                                        Consumo y producción sostenibles, uso eficiente de los recursos,
+                                                        reducción de residuos y adopción de prácticas sostenibles
                                                     </p>
                                                 </div>
                                             </div>
@@ -453,41 +591,6 @@
 
                                 </div>
 
-                                <div class="goal__card swiper-slide container-fluid">
-
-                                    <div class="row">
-                                        <div class="col-md-5 col-12 m-0 p-0">
-                                            <div class="goal__card_img-wrapper">
-                                                <img class="img-fluid goal__card_img" src="assets/images/goal-img.png"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-7 col-12 m-0 p-0">
-                                            <div class="goal__card_data">
-                                                <div class="row goal__title_wrapper ">
-                                                    <div class="col-1">
-                                                        <p class="goal__number">13</p>
-                                                    </div>
-                                                    <div class="col-11">
-                                                        <p class="goal__title">
-                                                            PRODUCCIÓN Y CONSUMO RESPONSABLE
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="goal__description_wrapper">
-                                                    <p class="goal_description">
-                                                        Lorem ipsum dolor sit amet consectetur adipiscing elit ultrices
-                                                        scelerisque mi sed interdum lacus tellus in mi orc, netus nisl
-                                                        laoreet
-                                                        phasellus. Pellentesque non nunc placerat mi quis vitae cursus
-                                                        ornare.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
 
                             </div>
 
@@ -593,7 +696,7 @@
 </body>
 
 <script>
-    var swiper = new Swiper(".project_swiper" , {
+    var swiper = new Swiper(".project_swiper", {
         slidesPerView: 4,
         centeredSlides: false,
 
