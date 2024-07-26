@@ -25,13 +25,13 @@
 </head>
 
 <body>
-    
-     <!-- ===== Preloader ===== -->
-     <div id="preloader">
+
+    <!-- ===== Preloader ===== -->
+    <div id="preloader">
         <div class="spinner"></div>
     </div>
 
-    
+
     <header>
         <!-- ===== Navbar ===== -->
         <nav class="navbar navbar-expand-md" id="navbar-top">
@@ -80,13 +80,13 @@
 
         <!-- ===== Lifestyle Hero ===== -->
 
-        <section class="lifestyle__hero section">
+        <!-- <section class="lifestyle__hero section">
             <div class="lifestyle__header_data">
                 <h3 class="lifestyle__header_heading">A dedicated team to grow your company</h3>
                 <p class="lifestyle__header_text">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
                     phasellus mollis sit aliquam sit nullam neque ultrices.</p>
-                
-                    <div class="lifestyle__button_wrapper">
+
+                <div class="lifestyle__button_wrapper">
 
                     <a href="index.html" class="link__button">
                         <button class="btn header_btn lifestyle__start_btn me-sm-3 me-0">Get started <i
@@ -95,15 +95,15 @@
                     <a href="#">
                         <button class="btn header_btn lifestyle__sales_btn">Talk to sales</button>
                     </a>
-                
+
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
         <!-- ===== Lifestyle Image section ===== -->
 
-        <section class="section">
+        <!-- <section class="section">
             <div class="lifestyle__image_wrapper">
 
                 <img src="assets/images/lifestyle-image-1.png" alt="" class="lifestyle__image img-fluid">
@@ -113,7 +113,222 @@
                             class="ri-arrow-right-line"></i></button>
                 </a>
             </div>
+        </section> -->
+
+
+        <!-- ===== Garment Buttons Section ===== -->
+
+
+        <section>
+            <div class="section__head">
+                <div class="section__title">
+                    Sostenibilidad en cada prenda:
+                </div>
+                <div class="section_subtitle">
+                    Nuestra ropa está 100% fabricada con materiales reciclados, combinando estilo y sostenibilidad para
+                    un futuro más verde.
+                </div>
+            </div>
+            <div class="section__data">
+                <div class="container-fluid mt-4">
+
+                    <div class="row">
+                        <div class="col-md-6 col-12 garment__button_card-wrapper d-flex justify-content-center">
+                            <a href="#company-garment" class="garment__button_card">
+                                <img src="assets/images/lifestyle-image-1.png"
+                                    class="img-fluid garment__button_card-image" alt="">
+                                <button class="btn garment__button_card-button"> Para empresa </button>
+                            </a>
+                        </div>
+
+                        <div class="col-md-6 col-12 garment__button_card-wrapper">
+                            <a href="store.html" class="garment__button_card">
+                                <img src="assets/images/project-card-2.png" class="img-fluid garment__button_card-image"
+                                    alt="">
+                                <button class="btn garment__button_card-button"> Para mi </button>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
         </section>
+
+
+        <!-- ===== Company Garment Section ===== -->
+
+        <section id="company-garment">
+            <div class="section__head">
+                <p class="company__garment_quote">
+                    "Los valores y filosofía de la empresa entran en contacto con el empleado desde el
+                    momento en que se pone el uniforme."
+                </p>
+                <p class="company__garment_author">
+                    ¿Cuántas prendas necesitas?
+                </p>
+            </div>
+
+            <div class="section__data">
+                <div class="container-fluid company__garment_card-wrapper">
+
+                    <div class="company__garment_card">
+                        <img src="assets/images/company-garment-bg.jpg" class="img-fluid company__garment_card-image"
+                            alt="">
+                        <a href="store.html">
+                            <button
+                                class="btn company__garment_card-button company__garment_card-button-left header_btn">-300
+                                piezas</button>
+                        </a>
+
+                        <button class="btn company__garment_card-button company__garment_card-button-right header_btn"
+                            data-bs-toggle="modal" data-bs-target="#bulkorderpopup">+300 piezas</button>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- Contact Modal -->
+            <div class="modal fade" id="bulkorderpopup" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="bulkorderpopupLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered contact__modal modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header contact__modal_header p-0">
+                            <h1 class="modal-title fs-3" id="bulkorderpopupLabel"><span style="visibility: hidden;">.</span></h1>
+                            <button type="button" class="btn-close contact__modal_close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body contact__modal_body pb-4 px-md-4 px-2">
+                            <p class="modal__text">
+                                Te invitamos a ver nuestro stock disponible para entrega inmediata, si requieres algun
+                                personalizado, puedes solicitar su cotización a <a href="mailto:hola@greenhug.com">hola@greenhug.com</a>. o mencionarlo una vez
+                                hecho el pedido
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+
+        <!-- ===== Bulk Garment Section ===== -->
+
+        <section id="bulk-garment">
+            <div class="section__head">
+                <p class="bulk__garment_text">
+                    Descarga nuestro <a href="assets/documents/Store phone view.pdf" target="_blank">catálogo 2024</a> para conocer nuestros productos y precios según la
+                    cantidad deseada.
+                </p>
+                <p class="bulk__garment_text">
+                    Compartenos tu diseño, cantidad y fecha qué necesitas las prendas y uno de nuestros
+                    asesores se pondrá en contacto contigo
+                </p>
+            </div>
+
+            <div class="section__data">
+                <div class="container-fluid company__garment_card-wrapper">
+
+                    <div class="company__garment_card">
+                        <img src="assets/images/shirts-hanging.jpg" class="img-fluid company__garment_card-image"
+                            alt="">
+
+                        <button class="btn bulk__garment_card-button header_btn" data-bs-toggle="modal"
+                            data-bs-target="#Contactpopup">Compartir información</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- Contact Modal -->
+            <div class="modal fade" id="Contactpopup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="ContactpopupLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered contact__modal modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header contact__modal_header pb-0">
+                            <h1 class="modal-title fs-3" id="ContactpopupLabel">Contacta un asesor</h1>
+                            <button type="button" class="btn-close contact__modal_close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body contact__modal_body py-0 px-md-4 px-2">
+                            <form action="#" method="post" class="container-fluid" enctype="multipart/form-data">
+                                <div class="mb-2">
+                                    <label for="name" class="form-label">Nombre :</label>
+
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="john"
+                                        required />
+                                </div>
+                                <div class="mb-2">
+                                    <label for="company" class="form-label">Empresa :</label>
+
+                                    <input type="text" name="company" id="company" class="form-control"
+                                        placeholder="Your Company" required />
+                                </div>
+                                <div class="mb-2">
+                                    <label for="email" class="form-label">Correo :</label>
+
+                                    <input type="email" name="email" id="email" class="form-control"
+                                        placeholder="john@company.com" required />
+                                </div>
+                                <div class="mb-2">
+                                    <label for="project" class="form-label">Proyecto :</label>
+
+                                    <select class="form-select contact__modal_select" name="project" id="project"
+                                        required>
+                                        <option selected>Select one</option>
+                                        <option value="experience">Experience</option>
+                                        <option value="talks">Talks</option>
+                                        <option value="lifestyle">Lifestyle</option>
+                                        <option value="upcycling">Upcycling</option>
+                                    </select>
+
+                                </div>
+                                <div class="mb-2">
+                                    <label for="email" class="form-label">Mensaje :</label>
+                                    <textarea class="form-control" name="message" id="message" rows="3"
+                                        placeholder="your mesage ...." required></textarea>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="" class="form-label">File : <sup><i>(Optional)</i></sup></label>
+                                    <input type="file" class="form-control" name="" id="" placeholder="" />
+                                </div>
+                        </div>
+
+                        <div class="modal-footer contact__modal_footer my-2">
+                            <button type="submit" class="btn contact__modal_button py-2">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </section>
+
 
 
 

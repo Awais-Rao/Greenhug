@@ -34,6 +34,8 @@
 
     --individual-ranking-font: 100px;
 
+    --single-product-font: 20px;
+
 
     /*========== Colors ==========*/
     --primary-color: #5C6A5D;
@@ -116,6 +118,10 @@
 
 .green {
     background: var(--primary-dark-color);
+}
+
+.experience__advice_section {
+    padding: 1.5rem auto;
 }
 
 button {
@@ -512,6 +518,14 @@ button:hover {
     filter: invert(1) !important;
 }
 
+.contact__modal_body .modal__text,
+.contact__modal_body .modal__text a {
+    font-size: var(--header-paragraph-font);
+    text-align: center;
+    color: var(--white-color) !important;
+    line-height: 140%;
+}
+
 .contact__modal_body .form-label {
     margin-bottom: 0.2rem;
 }
@@ -831,13 +845,19 @@ button:hover {
     justify-content: center;
 }
 
-.goal__icon_wrapper i {
+.goal__icon_wrapper i,
+.goal__icon_wrapper svg {
     text-align: center;
     height: auto;
     object-fit: cover;
     object-position: center;
     font-size: var(--big-card-heading);
     line-height: 90%;
+}
+
+.goal__icon_wrapper svg {
+
+    width: 15% !important;
 }
 
 .goal__title_wrapper {
@@ -1157,7 +1177,7 @@ button:hover {
 
 .clarity__item img,
 .clarity__item svg {
-    height: 60px;
+    height: 60px !important;
     padding: .3rem;
 }
 
@@ -1195,7 +1215,7 @@ button:hover {
 }
 
 .experience_advice_img {
-    width: 150px;
+    width: 100px;
 }
 
 .experience_advice_text {
@@ -1203,7 +1223,7 @@ button:hover {
     color: var(--white-color);
     font-size: var(--large-heading-font);
     line-height: 130%;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 /* ----- Experience Number ----- */
@@ -1230,7 +1250,7 @@ button:hover {
     border: 10.35px solid var(--white-color);
     font-size: var(--ranking-heading-font);
     color: var(--white-color);
-    background: #000;
+    background: var(--primary-dark-color);
     border-radius: 40px;
     text-align: center;
     letter-spacing: 8px;
@@ -1540,8 +1560,8 @@ button:hover {
     text-align: center;
     font-weight: 700;
     color: var(--primary-color);
-    font-size: var(--big-card-heading);
-    line-height: 87%;
+    font-size: var(--header-heading-font);
+    line-height: 93%;
     width: 80%;
 }
 
@@ -1558,13 +1578,12 @@ button:hover {
 /* ---- history year ----- */
 
 .history__year {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-
-    width: 18%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    width: 18% !important;
     font-size: var(--history-year-font);
     color: #DDD2C0;
     font-weight: 700;
@@ -1592,13 +1611,49 @@ button:hover {
     border-radius: 25px;
     overflow: hidden;
     margin: 1rem 0;
+    background-color: white !important;
 }
 
-.year__data_image {
-    max-height: 750px;
-    margin: 1rem 0;
+.year__image_slider-wrapper {
+    margin: 2rem 0;
+    height: 500px !important;
+    width: 350px !important;
+    background-color: white !important;
 }
 
+.year__image_wrapper {
+    height: 500px !important;
+    width: 350px !important;
+    overflow: hidden !important;
+    position: relative;
+    border-radius: 25px;
+    background-color: white !important;
+}
+
+.year__image_wrapper img {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 500px;
+    background-color: white !important;
+}
+
+
+#year__img_next {
+    position: absolute !important;
+    top: 50% !important;
+    right: 0 !important;
+    transform: scale(0.7);
+}
+
+#year__img_prev {
+    position: absolute !important;
+    top: 50% !important;
+    left: 0 !important;
+    transform: scale(0.7);
+}
 
 /* =========================================== Life Style ================================================= */
 
@@ -1670,6 +1725,137 @@ button:hover {
 }
 
 
+/* ------ Lifestyle Updations ------ */
+
+.garment__button_card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.garment__button_card {
+    position: relative;
+    height: 500px !important;
+    width: 60% !important;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.garment__button_card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center;
+}
+
+.garment__button_card-button {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background-color: #39433aba !important;
+    color: white !important;
+    border-radius: 500px;
+    padding: .5rem 1rem;
+}
+
+.garment__button_card-button:hover {
+    transform: translateX(-50%) translateY(-5px) !important;
+}
+
+
+.company__garment_quote {
+    color: #9795B5;
+    text-align: center;
+    font-size: var(--history-year-text-font);
+    line-height: 140%;
+    width: 80% !important;
+    margin: 0 auto;
+}
+
+.company__garment_author {
+    margin-top: 1rem;
+    color: #9795B5;
+    text-align: center;
+    font-size: var(--history-year-text-font);
+    line-height: 140%;
+}
+
+.company__garment_card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company__garment_card {
+    position: relative;
+    width: 80% !important;
+    border-radius: 25px;
+    height: 500px !important;
+    overflow: hidden;
+}
+
+.company__garment_card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center;
+}
+
+.company__garment_card-button {
+    position: absolute;
+    bottom: 2rem;
+    z-index: 2;
+    background-color: #39433aba !important;
+    color: white !important;
+    border-radius: 500px;
+    padding: 1.2rem 3rem;
+}
+
+.company__garment_card-button-left {
+    left: 5% !important;
+}
+
+.company__garment_card-button-right {
+    right: 5% !important;
+}
+
+
+.bulk__garment_text,
+.bulk__garment_text a {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: var(--header-paragraph-font);
+    line-height: 140%;
+    width: 80% !important;
+    margin: 1rem auto;
+}
+
+.bulk__garment_card-button {
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 2;
+    background-color: #39433aba !important;
+    color: white !important;
+    border-radius: 500px;
+    padding: 1.2rem 3rem;
+}
+
+.bulk__garment_card-button:hover {
+    transform: translate(-50%, -60%) !important;
+}
+
+
+
 
 /* =========================================== Upscaling ================================================= */
 
@@ -1707,7 +1893,7 @@ button:hover {
 
 .upscaling__hero_img {
     width: 180px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .upscaling__hero_heading {
@@ -1751,7 +1937,7 @@ button:hover {
 }
 
 .result__card_image {
-    height: 120px;
+    height: 150px !important;
     margin-bottom: .7rem;
 }
 
@@ -1768,32 +1954,31 @@ button:hover {
 
 
 /* --------- upscaling steps -------- */
-
 .step__cards_data {
     padding-bottom: 20rem;
 }
 
-.step__card_1 {
+.step__card_wrapper:nth-child(1) .step__card {
     background: #839599;
 }
 
-.step__card_2 {
+.step__card_wrapper:nth-child(2) .step__card {
     background: #748586;
 }
 
-.step__card_3 {
+.step__card_wrapper:nth-child(3) .step__card {
     background: #657473;
 }
 
-.step__card_4 {
+.step__card_wrapper:nth-child(4) .step__card {
     background: #576460;
 }
 
-.step__card_5 {
+.step__card_wrapper:nth-child(5) .step__card {
     background: #48534d;
 }
 
-.step__card_6 {
+.step__card_wrapper:nth-child(6) .step__card {
     background: #39433a;
 }
 
@@ -1844,10 +2029,15 @@ button:hover {
     color: var(--white-color);
 }
 
-.step__card_icon {
+.step__card_image-wrapper {
     font-size: var(--header-subheading-font);
     text-align: center;
+    margin-top: .5rem;
     margin-bottom: 1rem;
+}
+
+.step__card_image {
+    width: 35% !important;
 }
 
 .step__card_heading {
@@ -2031,18 +2221,236 @@ button:hover {
 }
 
 
+/* =========================================== Store ================================================= */
+
+.store__logo_wrapper{
+    margin-bottom: 30px;
+}
+
+.category__wrapper,
+.subcategory__wrapper{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.category__wrapper{
+    margin-bottom: 20px;
+}
+.category {
+    display: block;
+    padding: 5px 20px;
+    color: var(--primary-dark-color);
+    border: 2px solid var(--primary-dark-color);
+    font-size: var(--section-subtitle-font);
+    border-radius: 500px;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+.single__category input[type="radio"],
+.single__subcategory input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .category {
+    background-color: var(--primary-dark-color);
+    color: #fff;
+}
+input[type="radio"]:checked + .subcategory {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+
+.product__wrapper_column{
+    position: relative;
+    overflow: hidden;
+}
+
+.store__product_wrapper{
+    position: relative;
+    overflow: hidden;
+    height: 450px;
+}
+.store__product_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.store__product_btn{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: var(--white-color);
+    height: 40px;
+    width: 40px;
+    border-radius: 500px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-size: var(--medium-heading-font);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+}
+.product__wrapper_column:hover .store__product_btn{
+    opacity: 1;
+    transform: translate(-50%, 0px) !important;
+}
 
 
 
+/* ========================================== Single Product Page ================================================== */
+
+.product__resource_heading{
+    font-size: var(--header-paragraph-font);
+}
+
+.product__resource{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product__resource svg{
+    height: 70px;
+    margin-bottom: 20px;
+}
+.water__resource{
+    color: #839599;
+    fill: #839599;
+}
+.carbon__resource{
+    color: #ddd2c0;
+    fill: #ddd2c0;
+}
+.bottle__resource{
+    color: var(--primary-dark-color);
+    fill: var(--primary-dark-color);
+}
 
 
 
+.outline__border_wrapper{
+    border: 3px solid var(--primary-dark-color);
+    border-radius: 25px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.product__detail_item p{
+    font-size: var(--single-product-font) ;
+}
+
+
+.product__size_wrapper{
+
+}
+.product__size_buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    row-gap: 25px;
+}
+
+.single__size_btn {
+    position: relative;
+}
+
+.size__btn {
+    display: inline-block;
+    padding: 5px 50px;
+    color: var(--primary-dark-color);
+    border: 2px solid var(--primary-dark-color);
+    font-size: var(--section-subtitle-font);
+    border-radius: 500px;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.single__size_btn small {
+    display: none;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%, 80%);
+    font-size: 14px;
+    width: 150%;
+    text-align: center;
+}
+
+.single__size_btn input[type="radio"] {
+    display: none;
+}
+
+.single__size_btn input[type="radio"]:checked + label.size__btn {
+    background-color: var(--primary-dark-color);
+    color: #fff;
+}
+
+.single__size_btn input[type="radio"]:checked + label.size__btn + small {
+    display: block;
+}
 
 
 
+.product__quantity{
+    display: flex;
+    align-items: center;
+}
+.product__quantity_input{
+    width: 50px;
+    padding-left: 15px;
+    margin-left: 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    outline: 1px solid lightgray;
+}
 
+.cart__btn_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
 
+.product__cart_btn{
+    display: inline-block;
+    padding: 5px 50px;
+    color: var(--primary-dark-color);
+    border: 2px solid var(--primary-dark-color);
+    font-size: var(--section-subtitle-font);
+    border-radius: 500px;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+.product__cart_btn:hover{
+    background-color: var(--primary-dark-color);
+    color: var(--white-color);
+}
 
+.bluk__quantity_text-btn{
+    text-decoration: none;
+    color: var(--primary-dark-color);
+}
 
 /* ========================================== Media Queries ================================================== */
 
@@ -2237,6 +2645,11 @@ button:hover {
         width: 80%;
     }
 
+    .garment__button_card {
+        height: 400px !important;
+        width: 80% !important;
+    }
+
     /* ============= Upscaling ============= */
 
     .upscaling__hero {
@@ -2248,7 +2661,7 @@ button:hover {
     }
 
     .result__card_image {
-        height: 90px;
+        height: 90px !important;
     }
 
     .step__cards_data {
@@ -2362,797 +2775,869 @@ button:hover {
     }
 
 
+    /* ------ Lifestyle ----- */
 
-
-    /* ------ Experience ----- */
-
-    .experience__hero_title {
-        padding: 0 2rem;
-    }
-
-    .experience__number_container:nth-child(1) {
-        margin-top: 2rem;
-    }
-
-    .monitoring__img_wrapper {
-        height: 450px;
-    }
-
-
-    .number__card_wrapper {
-        margin-bottom: 2rem;
-    }
-
-    .number__card .number_card_text {
-        margin-top: 1rem;
-    }
-
-
-
-    .talk__environment_point {
-        justify-content: start;
-        margin-bottom: 1rem;
-    }
-
-    .talk__environment_image {
-        margin: 3rem 0rem;
-    }
-
-    .talk__podcast_text {
-        line-height: 150%;
-        padding: 0 2rem;
-    }
-
-    .talk__platforms_wrapper {
-        width: 90%;
-    }
-
-    .talk__platform a img {
-        height: 80px;
-    }
-
-    .lifestyle__header_data {
-        width: 100%;
-    }
-
-    .lifestyle__image_wrapper {
-        height: 500px;
-    }
-
-    .upscaling__result_card-wrapper {
-        margin-bottom: 1rem;
-    }
-
-
-
-
-
-    .step__cards_data {
-        padding-bottom: 18rem;
-    }
-
-    .step__cards_container {
-        width: 100%;
-    }
-
-    .step__card {
-        margin: 2rem 1rem;
-    }
-
-    .step__card_wrapper:nth-child(even) {
-        transform: translateY(50%) !important;
-    }
-
-    .step__card_data {
-        width: 75%;
-    }
-
-    .step__card_text {
-        font-size: 16px;
-    }
-
-
-    /* ------individual ranking ------- */
-
-    .individual__company_ranking {
-        margin-top: 3rem;
-    }
-
-    .individual__impact_section-data {
-        padding: 3rem 0 0rem;
-    }
-
-    .individual__impact_card {
-        padding: 1rem 2rem;
-        margin: 0 0 2rem;
-        height: auto;
-    }
-
-    .individual__impact_card-big {
-        height: auto;
-        margin: 0 0 2rem;
-        font-size: var(--ranking-heading-font);
-        text-align: left;
-        line-height: 100%;
-    }
-
-    .individual__impact_card svg {
-        height: 70px;
-    }
-
-    .individual__impact_card-big svg {
-        height: 120px;
-    }
-
-    .simple__impact_card-wrapper {
-        margin-bottom: 1.2rem;
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Small devices (up to 576px) */
-@media (max-width: 576px) {
-
-    :root {
-
-        /*========== Font and typography ==========*/
-        --navbar-font: 14px;
-        --header-heading-font: 36px;
-        --header-subheading-font: 24px;
-        --header-paragraph-font: 20px;
-        --section-title-font: 40px;
-        --section-subtitle-font: 20px;
-        --paragraph-font: 14.5px;
-        --large-heading-font: 28px;
-        --medium-heading-font: 21px;
-        --big-card-heading: 44px;
-
-        --ranking-heading-font: 35px;
-        --ranking-year-font: 85px;
-        --ranking-paragraph-font: 17px;
-
-
-        --history-year-font: 45px;
-        --history-header-text-font: 40px;
-        --history-year-text-font: 30px;
-
-        --step-card-font: 100px;
-
-        --individual-ranking-font: 70px;
-
-
-    }
-
-    /*=============== REUSABLE CSS CLASSES ===============*/
-
-    .navbar {
-        padding: .8rem 1rem;
-    }
-
-    .section {
-        padding: 3rem 2rem;
-    }
-
-    .hero {
-        padding: 4rem 1.5rem;
-    }
-
-    .section__head {
-        padding: 3rem 2rem 0;
-    }
-
-    .section__data {
-        padding: 2rem 2rem 3rem;
-    }
-
-    .slide__section_data {
-        padding: 2rem 0 3rem !important;
-    }
-
-    .section__title {
-        text-align: left;
-        font-weight: 700;
-        margin-bottom: .5rem;
-        line-height: 42px;
-    }
-
-    .section_subtitle {
-        width: 100%;
-        text-align: left;
-    }
-
-
-    /* ---- Header ----- */
-    .header__data {
-        text-align: center;
-        width: 100%;
-        position: relative;
-        z-index: 1;
-        transform: translateY(-10%);
-    }
-
-    .header__data .heading {
-        line-height: 42px;
-        font-weight: 550;
-        margin-bottom: 2rem;
-    }
-
-    .header__data .sub__heading {
-        font-weight: 550;
-        line-height: 66.2px;
-    }
-
-    .header__data .button__wrapper {
-        margin-top: 2rem;
-        justify-content: center;
-    }
-
-    .header_btn {
-        font-size: var(--section-subtitle-font);
-        padding: .8rem 1rem;
-    }
-
-    /* ----- Number impact ----- */
-
-    .number__card_wrapper_flex {
-        display: flex !important;
-        align-items: center;
-        overflow: scroll;
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        scrollbar-width: none;
-        /* Firefox */
-    }
-
-    .number__card_wrapper_flex::-webkit-scrollbar {
-        display: none;
-
-    }
-
-    .second_number__card_wrapper_flex {
-        display: flex;
-        align-items: center;
-    }
-
-    .number__card {
-        /* margin: 2rem; */
-        transform: scale(0.9);
-    }
-
-    .number__card_big,
-    .number__card {
-        padding: 3rem;
-    }
-
-    .number__card_big svg,
-    .number__card svg {
-        height: 100px;
-        margin-bottom: 1rem;
-    }
-
-    .number__card_big .number_card_text,
-    .number__card .number_card_text {
-        font-size: var(--large-heading-font);
-        text-align: center;
-    }
-
-
-    /* ---- Testimonial ----- */
-    .testimonial__cards_wrapper {
-        flex-wrap: nowrap;
-    }
-
-    .testimonial__card .testimonial__img_wrapper {
-        height: 250px;
-    }
-
-    .testimonial__data {
-        padding: 1rem 1.3rem;
-    }
-
-    .testimonial__text {
-        margin-bottom: 2rem;
-    }
-
-
-    /* ---- Goal Section----- */
-    .goal__card {
-        transform: translateX(-4%) !important;
-    }
-
-    .goal__card_data {
-        padding: 3rem 2rem;
-    }
-
-    .goal__number {
-        font-size: 100px;
-        font-weight: 700;
-    }
-
-    .goal__title {
-        margin-left: 4rem;
-    }
-
-    .goal__description_wrapper {
-        margin-top: 0;
-    }
-
-    .goal__swiper_btn-wrapper {
-        margin-top: 0rem;
-    }
-
-
-    /* ----- Partner ----- */
-    .partner__img_wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    /* =========== Ranking =========== */
-
-    .ranking__header_section {
-        padding: 3rem 2rem 7rem;
-    }
-
-    .ranking_data_container {
-        padding: 2rem .5rem;
-    }
-
-    .ranking__header_left .heading {
-        letter-spacing: 5px;
-        line-height: 115%;
-    }
-
-    .ranking__header_left .year {
-        letter-spacing: 10px;
-        text-align: center;
-    }
-
-    .ranking__header_left .paragraph {
-        letter-spacing: 2px;
-        line-height: 125%;
-        font-weight: 500;
-        margin: 1rem 0 2rem;
-        text-align: center;
-    }
-
-    .ranking__searchbar {
-        width: 100%;
-    }
-
-
-    /* ----- Advantage Card ----- */
-
-    .ranking__advantage_card-wrapper {
-        padding: 1rem 1.5rem;
-    }
-
-    .ranking__advantage_card img {
-        width: 100px;
-    }
-
-    /* ----- Clearity Section ----- */
-
-    .clearity__section {
-        padding: 3rem 1rem;
-    }
-
-    .clearity__section_left-data {
-        transform: translateY(0%);
-    }
-
-    .clearity__section_subheading {
-        font-size: var(--section-subtitle-font);
-        padding-right: 0;
-    }
-
-    .clarity__cards_wrapper {
-        display: flex;
-        align-items: center;
-    }
-
-    .clarity__item_wrapper {
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: start;
-    }
-
-    .clarity__item_wrapper:nth-child(odd) {
-        padding-right: .5rem;
-    }
-
-    .clarity__item_wrapper:nth-child(even) {
-        padding-left: .5rem;
-    }
-
-    .clarity__item {
-        margin-bottom: 2rem;
-        padding-right: 0rem;
-        align-items: center;
-    }
-
-    .clarity__item img,
-    .clarity__item svg {
-        height: 40px;
-        padding: .3rem;
-    }
-
-    .clarity__item p {
-        font-weight: 700;
-        font-size: 16px;
-        /* line-height: 120%; */
-        margin-left: 1rem;
-        margin-bottom: 0;
-    }
-
-
-    /* ========== Experience ========== */
-
-    .experience__hero_title {
-        text-align: center;
-        padding: 2rem 1rem 0rem;
-    }
-
-    .experience__hero_title p {
-        margin-top: 2rem;
-        font-size: var(--section-subtitle-font);
-    }
-
-    .experience_advice_img {
-        width: 100px;
-    }
-
-    .experience_advice_text {
-        font-size: var(--header-subheading-font);
-        text-align: left;
-    }
-
-    .experience__number_heading {
-        font-size: var(--header-heading-font);
-    }
-
-    .experience__number_container:nth-child(1) {
-        margin-top: 3rem;
-    }
-
-    .experience__number_number_wrapper {
-        padding: 1rem .5rem;
-        font-size: var(--section-title-font);
+    .garment__button_card {
+        height: 300px !important;
         width: 100% !important;
     }
 
-    .experience__number_data {
-        width: 100%;
-    }
-
-    .experience__gallery_image {
-        height: 180px;
-    }
-
-    .experience__gallery_image-big {
-        height: 380px;
-    }
-
-    .experience_gallery_right {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .monitoring__bottom_heading {
-        font-size: var(--large-heading-font);
-        line-height: 110%;
-    }
-
-    .experience__card {
-        padding: 3rem 2rem;
-    }
-
-    .experience__card_text {
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    /* ===== Talks ===== */
-
-
-    .talk__hero {
-        padding: 5rem 2rem;
-    }
-
-    .talk__hero_data {
-        text-align: left;
-    }
-
-    .talk__hero_text {
-        width: 100%;
-    }
-
-    .green__talk_title {
-        padding: 0;
-    }
-
-    .talk__environment_point {
-        justify-content: start;
-        margin-top: 1rem;
-    }
-
-    .talk__environment_point span {
-        padding-top: 1.5%;
-    }
-
-    .talk__environment_image {
-        height: 390px;
-        margin: 3rem 0;
-    }
-
-    .talk__podcast_text {
-        padding: 0;
-        line-height: 140%;
-    }
-
-
-    .talk__platforms_wrapper {
-        width: 90%;
-    }
-
-    .talk__platform a img {
-        height: auto;
-    }
-
-
-
-
-    /* ===== History ====== */
-
-    .history_hero {
-        padding: 4rem 2rem;
-    }
-
-    .history__hero_heading {
-        text-align: left;
-        font-size: var(--big-card-heading);
-        line-height: 87%;
-        width: 100%;
-    }
-
-    .history__hero_text {
-        font-size: var(--medium-heading-font);
-        text-align: left;
-        width: 100%;
-    }
-
-    .history__year {
-        width: 50%;
-    }
-
-    .year__data_text {
-        text-align: left;
-        font-size: var(--medium-heading-font);
-        line-height: 140%;
-        margin: 1rem 0;
-    }
-
-    .year__data_image {
-        max-height: 420px;
-        margin: 1rem 0;
-    }
-
-
-
-    /* =========== Lifestyle ============= */
-
-    .lifestyle__hero {
-        padding: 8rem 2rem 7rem;
-    }
-
-    .lifestyle__header_data {
-        width: 100%;
-    }
-
-    .lifestyle__header_text {
-        margin-top: 1.5rem;
-    }
-
-
-
-    /* =========== Upscaling ============= */
-
-    .upscaling__hero {
-        padding: 2rem 1rem;
-    }
-
-    .upscaling__hero_img {
-        width: 150px;
-        margin: 2rem 0;
-    }
-
-    .upscaling__hero_text {
-        text-align: left;
-        width: 100%;
-        padding: 0 .5rem;
-    }
-
-    .upscaling_btn {
-        margin: 2rem 0;
-    }
-
-    .upscaling__result_card {
-        margin-bottom: 1.5rem;
-    }
-
-
-    .step__cards_data {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 10rem;
-    }
-
-    .step__cards_container {
-        width: 100%;
-    }
-
-    .step__card_wrapper {
-        padding-left: .5rem;
-        padding-right: .5rem;
-    }
-
-    .step__card {
-        margin: 3rem 0;
-        padding: 1rem .5rem .3rem;
-    }
-
-    .step__card_wrapper:nth-child(even) {
-        transform: translateY(50%) !important;
-    }
-
-
-    .step__card_number {
-        transform: translate(-55%, -50%);
-        text-shadow:
-            5px 0 0 white,
-            -5px 0 0 white,
-            0 5px 0 white,
-            0 -5px 0 white,
-            5px 5px 0 white,
-            -5px -5px 0 white,
-            5px -5px 0 white,
-            -5px 5px 0 white;
-    }
-
-    .step__card_data {
-        width: 80%;
-    }
-
-    .step__card_icon {
-        font-size: var(--header-heading-font);
-        margin-bottom: 0.3em;
-        line-height: 95%;
-    }
-
-    .step__card_heading {
-        font-size: var(--medium-heading-font);
-        text-align: center;
-        margin-bottom: .5rem;
-    }
-
-    .step__card_text {
-        font-size: 10px;
-    }
-
-    .upscaling__project_card {
-        min-height: 300px;
-    }
-
-    .upscaling__project_card-wrapper {
-        margin-bottom: 1.5rem;
-    }
-
-
-
-    /* -------------- Individual ranking ----------- */
-
-    .individual__hero {
-        padding-top: 7rem;
-        padding-bottom: 0rem;
-    }
-
-    .individual__company_tagline {
-        font-size: var(--medium-heading-font);
-    }
-
-    .individual__company_logo {
-        width: 60px;
-    }
-
-    .individual__hero_text {
-        text-align: center;
-        line-height: 120%;
-    }
-
-    .individual__company_ranking {
+    .garment__button_card-wrapper:nth-child(2) {
         margin-top: 3rem;
     }
 
-    .individual__impact_head {
-        padding-top: 1rem;
+    .garment__button_card-button {
+        bottom: 1rem !important;
     }
 
-    .individual__impact_subtitle,
-    .individual__impact_title {
-        text-align: center;
+    .company__garment_quote,
+    .company__garment_author {
+        font-size: var(--header-paragraph-font) !important;
     }
 
-
-    .individual__impact_section-data {
-        padding: 3rem 0 0rem;
+    .company__garment_quote,
+    .company__garment_card,
+    .bulk__garment_text {
+        width: 90% !important;
     }
 
-    .individual__impact_card {
-        padding: 1rem 2rem;
-        margin: 0 0 2rem;
-        height: auto;
+    .company__garment_card {
+        height: 300px !important;
     }
 
-    .individual__impact_card-big {
-        height: auto;
-        margin: 0 0 2rem;
-        font-size: var(--ranking-heading-font);
-        text-align: left;
-        line-height: 100%;
+    .company__garment_card-button:hover,
+    .company__garment_card-button {
+        transform: scale(0.7) !important;
+        bottom: 1rem !important;
     }
 
-    .individual__impact_card svg {
-        height: 70px;
+    .company__garment_card-button-left {
+        left: 0 !important;
+    }
+    .company__garment_card-button-right {
+        right: 0 !important;
     }
 
-    .individual__impact_card-big svg {
-        height: 120px;
-    }
-
-    /* ----- simple impact cards ------ */
-
-    .simple__impact_card-container {
-        margin-top: 1rem;
-    }
-
-    .simple__impact_card {
-        padding: .5rem;
-        margin-bottom: 1rem;
-    }
-
-    .simple__impact_card img {
-        height: 60px;
-        margin-top: .5rem;
+    .bulk__garment_card-button,
+    .bulk__garment_card-button:hover {
+        transform: translate(-50%, -50%) scale(0.7) !important;
     }
 
 
 
-}
+        /* ------ Experience ----- */
+
+        .experience__hero_title {
+            padding: 0 2rem;
+        }
+
+        .experience__number_container:nth-child(1) {
+            margin-top: 2rem;
+        }
+
+        .monitoring__img_wrapper {
+            height: 450px;
+        }
+
+
+        .number__card_wrapper {
+            margin-bottom: 2rem;
+        }
+
+        .number__card .number_card_text {
+            margin-top: 1rem;
+        }
+
+
+
+        .talk__environment_point {
+            justify-content: start;
+            margin-bottom: 1rem;
+        }
+
+        .talk__environment_image {
+            margin: 3rem 0rem;
+        }
+
+        .talk__podcast_text {
+            line-height: 150%;
+            padding: 0 2rem;
+        }
+
+        .talk__platforms_wrapper {
+            width: 90%;
+        }
+
+        .talk__platform a img {
+            height: 80px;
+        }
+
+        .lifestyle__header_data {
+            width: 100%;
+        }
+
+        .lifestyle__image_wrapper {
+            height: 500px;
+        }
+
+        .upscaling__result_card-wrapper {
+            margin-bottom: 1rem;
+        }
 
 
 
 
 
+        .step__cards_data {
+            padding-bottom: 18rem;
+        }
 
-/* Extra small devices (up to 425px) */
-@media (max-width: 400px) {
+        .step__cards_container {
+            width: 100%;
+        }
 
-    .lifestyle__sales_btn {
-        margin-top: 1rem;
+        .step__card {
+            margin: 2rem 1rem;
+        }
+
+        .step__card_wrapper:nth-child(even) {
+            transform: translateY(50%) !important;
+        }
+
+        .step__card_data {
+            width: 75%;
+        }
+
+        .step__card_text {
+            font-size: 16px;
+        }
+
+
+        /* ------individual ranking ------- */
+
+        .individual__company_ranking {
+            margin-top: 3rem;
+        }
+
+        .individual__impact_section-data {
+            padding: 3rem 0 0rem;
+        }
+
+        .individual__impact_card {
+            padding: 1rem 2rem;
+            margin: 0 0 2rem;
+            height: auto;
+        }
+
+        .individual__impact_card-big {
+            height: auto;
+            margin: 0 0 2rem;
+            font-size: var(--ranking-heading-font);
+            text-align: left;
+            line-height: 100%;
+        }
+
+        .individual__impact_card svg {
+            height: 70px;
+        }
+
+        .individual__impact_card-big svg {
+            height: 120px;
+        }
+
+        .simple__impact_card-wrapper {
+            margin-bottom: 1.2rem;
+        }
+
+
+        .category{
+            font-size: 16px;
+        }
+        .store__product_wrapper{
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+        }
     }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Small devices (up to 576px) */
+    @media (max-width: 576px) {
+
+        :root {
+
+            /*========== Font and typography ==========*/
+            --navbar-font: 14px;
+            --header-heading-font: 36px;
+            --header-subheading-font: 24px;
+            --header-paragraph-font: 20px;
+            --section-title-font: 40px;
+            --section-subtitle-font: 20px;
+            --paragraph-font: 14.5px;
+            --large-heading-font: 28px;
+            --medium-heading-font: 21px;
+            --big-card-heading: 44px;
+
+            --ranking-heading-font: 35px;
+            --ranking-year-font: 85px;
+            --ranking-paragraph-font: 17px;
+
+
+            --history-year-font: 45px;
+            --history-header-text-font: 40px;
+            --history-year-text-font: 30px;
+
+            --step-card-font: 100px;
+
+            --individual-ranking-font: 70px;
+
+
+        }
+
+        /*=============== REUSABLE CSS CLASSES ===============*/
+
+        .navbar {
+            padding: .8rem 1rem;
+        }
+
+        .section {
+            padding: 3rem 2rem;
+        }
+
+        .hero {
+            padding: 4rem 1.5rem;
+        }
+
+        .section__head {
+            padding: 3rem 2rem 0;
+        }
+
+        .section__data {
+            padding: 2rem 2rem 3rem;
+        }
+
+        .slide__section_data {
+            padding: 2rem 0 3rem !important;
+        }
+
+        .section__title {
+            text-align: left;
+            font-weight: 700;
+            margin-bottom: .5rem;
+            line-height: 42px;
+        }
+
+        .section_subtitle {
+            width: 100%;
+            text-align: left;
+        }
+
+
+        /* ---- Header ----- */
+        .header__data {
+            text-align: center;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            transform: translateY(-10%);
+        }
+
+        .header__data .heading {
+            line-height: 42px;
+            font-weight: 550;
+            margin-bottom: 2rem;
+        }
+
+        .header__data .sub__heading {
+            font-weight: 550;
+            line-height: 66.2px;
+        }
+
+        .header__data .button__wrapper {
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .header_btn {
+            font-size: var(--section-subtitle-font);
+            padding: .8rem 1rem;
+        }
+
+        /* ----- Number impact ----- */
+
+        .number__card_wrapper_flex {
+            display: flex !important;
+            align-items: center;
+            overflow: scroll;
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .number__card_wrapper_flex::-webkit-scrollbar {
+            display: none;
+
+        }
+
+        .second_number__card_wrapper_flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .number__card {
+            /* margin: 2rem; */
+            transform: scale(0.9);
+        }
+
+        .number__card_big,
+        .number__card {
+            padding: 3rem;
+        }
+
+        .number__card_big svg,
+        .number__card svg {
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .number__card_big .number_card_text,
+        .number__card .number_card_text {
+            font-size: var(--large-heading-font);
+            text-align: center;
+        }
+
+
+        /* ---- Testimonial ----- */
+        .testimonial__cards_wrapper {
+            flex-wrap: nowrap;
+        }
+
+        .testimonial__card .testimonial__img_wrapper {
+            height: 250px;
+        }
+
+        .testimonial__data {
+            padding: 1rem 1.3rem;
+        }
+
+        .testimonial__text {
+            margin-bottom: 2rem;
+        }
+
+
+        /* ---- Goal Section----- */
+        .goal__card {
+            transform: translateX(-4%) !important;
+        }
+
+        .goal__card_data {
+            padding: 3rem 2rem;
+        }
+
+        .goal__number {
+            font-size: 100px;
+            font-weight: 700;
+        }
+
+        .goal__title {
+            margin-left: 4rem;
+        }
+
+        .goal__description_wrapper {
+            margin-top: 0;
+        }
+
+        .goal__swiper_btn-wrapper {
+            margin-top: 0rem;
+        }
+
+
+        /* ----- Partner ----- */
+        .partner__img_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* =========== Ranking =========== */
+
+        .ranking__header_section {
+            padding: 3rem 2rem 7rem;
+        }
+
+        .ranking_data_container {
+            padding: 2rem .5rem;
+        }
+
+        .ranking__header_left .heading {
+            letter-spacing: 5px;
+            line-height: 115%;
+        }
+
+        .ranking__header_left .year {
+            letter-spacing: 10px;
+            text-align: center;
+        }
+
+        .ranking__header_left .paragraph {
+            letter-spacing: 2px;
+            line-height: 125%;
+            font-weight: 500;
+            margin: 1rem 0 2rem;
+            text-align: center;
+        }
+
+        .ranking__searchbar {
+            width: 100%;
+        }
+
+
+        /* ----- Advantage Card ----- */
+
+        .ranking__advantage_card-wrapper {
+            padding: 1rem 1.5rem;
+        }
+
+        .ranking__advantage_card img {
+            width: 100px;
+        }
+
+        /* ----- Clearity Section ----- */
+
+        .clearity__section {
+            padding: 3rem 1rem;
+        }
+
+        .clearity__section_left-data {
+            transform: translateY(0%);
+        }
+
+        .clearity__section_subheading {
+            font-size: var(--section-subtitle-font);
+            padding-right: 0;
+        }
+
+        .clarity__cards_wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .clarity__item_wrapper {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+
+        .clarity__item_wrapper:nth-child(odd) {
+            padding-right: .5rem;
+        }
+
+        .clarity__item_wrapper:nth-child(even) {
+            padding-left: .5rem;
+        }
+
+        .clarity__item {
+            margin-bottom: 2rem;
+            padding-right: 0rem;
+            align-items: center;
+        }
+
+        .clarity__item img,
+        .clarity__item svg {
+            height: 40px;
+            padding: .3rem;
+        }
+
+        .clarity__item p {
+            font-weight: 700;
+            font-size: 16px;
+            /* line-height: 120%; */
+            margin-left: 1rem;
+            margin-bottom: 0;
+        }
+
+
+        /* ========== Experience ========== */
+
+        .experience__hero_title {
+            text-align: center;
+            padding: 2rem 1rem 0rem;
+        }
+
+        .experience__hero_title p {
+            margin-top: 2rem;
+            font-size: var(--section-subtitle-font);
+        }
+
+        .experience_advice_img {
+            width: 70px;
+        }
+
+        .experience_advice_text {
+            font-size: var(--header-subheading-font);
+            text-align: left;
+        }
+
+        .experience__number_heading {
+            font-size: var(--header-heading-font);
+        }
+
+        .experience__number_container:nth-child(1) {
+            margin-top: 3rem;
+        }
+
+        .experience__number_number_wrapper {
+            padding: 1rem .5rem;
+            font-size: var(--section-title-font);
+            width: 100% !important;
+        }
+
+        .experience__number_data {
+            width: 100%;
+        }
+
+        .experience__gallery_image {
+            height: 180px;
+        }
+
+        .experience__gallery_image-big {
+            height: 380px;
+        }
+
+        .experience_gallery_right {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .monitoring__bottom_heading {
+            font-size: var(--large-heading-font);
+            line-height: 110%;
+        }
+
+        .experience__card {
+            padding: 3rem 2rem;
+        }
+
+        .experience__card_text {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        /* ===== Talks ===== */
+
+
+        .talk__hero {
+            padding: 5rem 2rem;
+        }
+
+        .talk__hero_data {
+            text-align: left;
+        }
+
+        .talk__hero_text {
+            width: 100%;
+        }
+
+        .green__talk_title {
+            padding: 0;
+        }
+
+        .talk__environment_point {
+            justify-content: start;
+            margin-top: 1rem;
+        }
+
+        .talk__environment_point span {
+            padding-top: 1.5%;
+        }
+
+        .talk__environment_image {
+            height: 390px;
+            margin: 3rem 0;
+        }
+
+        .talk__podcast_text {
+            padding: 0;
+            line-height: 140%;
+        }
+
+
+        .talk__platforms_wrapper {
+            width: 90%;
+        }
+
+        .talk__platform a img {
+            height: auto;
+        }
+
+
+
+
+        /* ===== History ====== */
+
+        .history_hero {
+            padding: 4rem 2rem;
+        }
+
+        .history__hero_heading {
+            text-align: left;
+            font-size: var(--big-card-heading);
+            line-height: 87%;
+            width: 100%;
+        }
+
+        .history__hero_text {
+            font-size: var(--medium-heading-font);
+            text-align: left;
+            width: 100%;
+        }
+
+        .history__year {
+            width: 50%;
+        }
+
+        .year__data_text {
+            text-align: left;
+            font-size: var(--medium-heading-font);
+            line-height: 140%;
+            margin: 1rem 0;
+        }
+
+        .year__data_image {
+            max-height: 420px;
+            margin: 1rem 0;
+        }
+
+
+
+        /* =========== Lifestyle ============= */
+
+        .lifestyle__hero {
+            padding: 8rem 2rem 7rem;
+        }
+
+        .lifestyle__header_data {
+            width: 100%;
+        }
+
+        .lifestyle__header_text {
+            margin-top: 1.5rem;
+        }
+
+        /* ------ Lifestyle ----- */
+
+        .garment__button_card {
+            height: 200px !important;
+        }
+
+        .company__garment_quote,
+        .company__garment_card,
+        .bulk__garment_text {
+            width: 100% !important;
+        }
+
+        .company__garment_card {
+            height: 200px !important;
+        }
+
+
+        /* =========== Upscaling ============= */
+
+        .upscaling__hero {
+            padding: 2rem 1rem;
+        }
+
+        .upscaling__hero_img {
+            width: 150px;
+            margin: 2rem 0;
+        }
+
+        .upscaling__hero_text {
+            text-align: left;
+            width: 100%;
+            padding: 0 .5rem;
+        }
+
+        .upscaling_btn {
+            margin: 2rem 0;
+        }
+
+        .upscaling__result_card {
+            margin-bottom: 1.5rem;
+        }
+
+
+        .step__cards_data {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 10rem;
+        }
+
+        .step__cards_container {
+            width: 100%;
+        }
+
+        .step__card_wrapper {
+            padding-left: .5rem;
+            padding-right: .5rem;
+        }
+
+        .step__card {
+            margin: 3rem 0;
+            padding: 1rem .5rem .3rem;
+        }
+
+        .step__card_wrapper:nth-child(even) {
+            transform: translateY(50%) !important;
+        }
+
+
+        .step__card_number {
+            transform: translate(-55%, -50%);
+            text-shadow:
+                5px 0 0 white,
+                -5px 0 0 white,
+                0 5px 0 white,
+                0 -5px 0 white,
+                5px 5px 0 white,
+                -5px -5px 0 white,
+                5px -5px 0 white,
+                -5px 5px 0 white;
+        }
+
+        .step__card_data {
+            width: 80%;
+        }
+
+        .step__card_icon {
+            font-size: var(--header-heading-font);
+            margin-bottom: 0.3em;
+            line-height: 95%;
+        }
+
+        .step__card_heading {
+            font-size: var(--medium-heading-font);
+            text-align: center;
+            margin-bottom: .5rem;
+        }
+
+        .step__card_text {
+            font-size: 10px;
+        }
+
+        .upscaling__project_card {
+            min-height: 300px;
+        }
+
+        .upscaling__project_card-wrapper {
+            margin-bottom: 1.5rem;
+        }
+
+
+
+        /* -------------- Individual ranking ----------- */
+
+        .individual__hero {
+            padding-top: 7rem;
+            padding-bottom: 0rem;
+        }
+
+        .individual__company_tagline {
+            font-size: var(--medium-heading-font);
+        }
+
+        .individual__company_logo {
+            width: 60px;
+        }
+
+        .individual__hero_text {
+            text-align: center;
+            line-height: 120%;
+        }
+
+        .individual__company_ranking {
+            margin-top: 3rem;
+        }
+
+        .individual__impact_head {
+            padding-top: 1rem;
+        }
+
+        .individual__impact_subtitle,
+        .individual__impact_title {
+            text-align: center;
+        }
+
+
+        .individual__impact_section-data {
+            padding: 3rem 0 0rem;
+        }
+
+        .individual__impact_card {
+            padding: 1rem 2rem;
+            margin: 0 0 2rem;
+            height: auto;
+        }
+
+        .individual__impact_card-big {
+            height: auto;
+            margin: 0 0 2rem;
+            font-size: var(--ranking-heading-font);
+            text-align: left;
+            line-height: 100%;
+        }
+
+        .individual__impact_card svg {
+            height: 70px;
+        }
+
+        .individual__impact_card-big svg {
+            height: 120px;
+        }
+
+        /* ----- simple impact cards ------ */
+
+        .simple__impact_card-container {
+            margin-top: 1rem;
+        }
+
+        .simple__impact_card {
+            padding: .5rem;
+            margin-bottom: 1rem;
+        }
+
+        .simple__impact_card img {
+            height: 60px;
+            margin-top: .5rem;
+        }
+
+
+
+    }
+
+
+
+
+
+
+    /* Extra small devices (up to 425px) */
+    @media (max-width: 400px) {
+
+        .lifestyle__sales_btn {
+            margin-top: 1rem;
+        }
+    }

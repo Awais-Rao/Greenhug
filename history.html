@@ -27,13 +27,13 @@
 </head>
 
 <body>
-    
-     <!-- ===== Preloader ===== -->
-     <div id="preloader">
+
+    <!-- ===== Preloader ===== -->
+    <div id="preloader">
         <div class="spinner"></div>
     </div>
 
-    
+
     <header>
         <!-- ===== Navbar ===== -->
         <nav class="navbar navbar-expand-md" id="navbar-top">
@@ -141,9 +141,67 @@
                             Todo lo traíamos de un proveedor extranjero, tuvimos una excelente respuesta de la gente y
                             muchos artistas nos apoyaron con nuestra causa.</p>
 
+                        <!-- <div class="year__data_image-wrapper">
+
+                            <div id="carouselExample" class="carousel carousel-fade">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="year__image_wrapper">
+                                            <img class="year__data_image img-fluid " src="assets/images/experience-gallery-img-3.jpg"
+                                                alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-control-prev year__slider_btn" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="prev">
+                                    <i class="ri-arrow-left-s-line"></i>
+                                    <span class="visually-hidden">Previous</span>
+                                </div>
+                                <div class="carousel-control-next year__slider_btn" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="next">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                    <span class="visually-hidden">Next</span>
+                                </div>
+                            </div>
+
+                        </div> -->
+
+
+
                         <div class="year__data_image-wrapper">
-                            <img class="year__data_image img-fluid " src="assets/images/2018-image.jpg" alt="">
+
+                            <div class="swiper year__img_swiper">
+                                <div class="swiper-wrapper  year__image_slider-wrapper">
+                                    <div class="swiper-slide  year__image_wrapper">
+                                        <img class="year__data_image img-fluid"
+                                            src="assets/images/experience-gallery-img-1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide  year__image_wrapper">
+                                        <img class="year__data_image img-fluid"
+                                            src="assets/images/experience-gallery-img-4.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide  year__image_wrapper">
+                                        <img class="year__data_image img-fluid"
+                                            src="assets/images/experience-gallery-img-3.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide  year__image_wrapper ">
+                                        <img class="year__data_image img-fluid"
+                                            src="assets/images/experience-gallery-img-4.jpg" alt="">
+                                    </div>
+
+                                </div>
+                                <div class="swiper-button-next" id="year__img_next"></div>
+                                <div class="swiper-button-prev" id="year__img_prev"></div>
+                            </div>
+
+                            <!-- <img class="year__data_image img-fluid " src="assets/images/2018-image.jpg" alt=""> -->
+
                         </div>
+
+
+
+
+
                     </div>
                 </div>
 
@@ -154,7 +212,33 @@
                     <div class="container-fluid year__data_wrapper">
 
                         <div class="year__data_image-wrapper">
-                            <img class="year__data_image img-fluid " src="assets/images/2018-image.jpg" alt="">
+
+                            <div class="swiper year__img_swiper">
+                                <div class="swiper-wrapper  year__image_slider-wrapper">
+                                    <div class="swiper-slide  year__image_wrapper">
+                                        <img class="year__data_image img-fluid"
+                                            src="assets/images/experience-gallery-img-1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide  year__image_wrapper">
+                                        <img class="year__data_image img-fluid"
+                                            src="assets/images/experience-gallery-img-4.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide  year__image_wrapper">
+                                        <img class="year__data_image img-fluid"
+                                            src="assets/images/experience-gallery-img-3.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide  year__image_wrapper ">
+                                        <img class="year__data_image img-fluid"
+                                            src="assets/images/experience-gallery-img-4.jpg" alt="">
+                                    </div>
+
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+
+                            <!-- <img class="year__data_image img-fluid " src="assets/images/2018-image.jpg" alt=""> -->
+
                         </div>
 
                     </div>
@@ -348,52 +432,64 @@
 
     });
 
+
+
+    var swiper = new Swiper('.year__img_swiper', {
+        effect: "fade",
+        loop: true,
+        autoplay: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
 </script>
 
 <script>
-   
-   document.addEventListener("DOMContentLoaded", function() {
-    // Get all elements with the class history__year
-    const yearLinks = document.querySelectorAll('.history__year');
 
-    // Add a click event listener to each element
-    yearLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            // Prevent default action (navigation)
-            event.preventDefault();
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all elements with the class history__year
+        const yearLinks = document.querySelectorAll('.history__year');
 
-            // Remove active class from all links
-            yearLinks.forEach(item => item.classList.remove('active'));
+        // Add a click event listener to each element
+        yearLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                // Prevent default action (navigation)
+                event.preventDefault();
 
-            // Add active class to the clicked link
-            this.classList.add('active');
+                // Remove active class from all links
+                yearLinks.forEach(item => item.classList.remove('active'));
 
-            // Get the ID of the content to show (from href attribute)
-            const targetId = this.getAttribute('href').replace('#', '');
+                // Add active class to the clicked link
+                this.classList.add('active');
 
-            // Get the tab-content element
-            const tabContent = document.querySelector('.tab-content');
+                // Get the ID of the content to show (from href attribute)
+                const targetId = this.getAttribute('href').replace('#', '');
 
-            // Find elements within tab-content that have the active or show class
-            const activeElements = tabContent.querySelectorAll('.active, .show');
+                // Get the tab-content element
+                const tabContent = document.querySelector('.tab-content');
 
-            // Remove the active and show classes from these elements
-            activeElements.forEach(element => {
-                element.classList.remove('active');
-                element.classList.remove('show');
+                // Find elements within tab-content that have the active or show class
+                const activeElements = tabContent.querySelectorAll('.active, .show');
+
+                // Remove the active and show classes from these elements
+                activeElements.forEach(element => {
+                    element.classList.remove('active');
+                    element.classList.remove('show');
+                });
+
+                // Find the target content to show
+                const targetContent = document.getElementById(targetId);
+
+                // Add active and show classes to the target content
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                    targetContent.classList.add('show');
+                }
             });
-
-            // Find the target content to show
-            const targetContent = document.getElementById(targetId);
-
-            // Add active and show classes to the target content
-            if (targetContent) {
-                targetContent.classList.add('active');
-                targetContent.classList.add('show');
-            }
         });
     });
-});
 
 
 </script>

@@ -26,27 +26,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// ========= Testimonial Cards Height ========
+// ========= Equal Height Function ========
 
-
-const cardWrappers = document.querySelectorAll('.card__wrapper');
+function setEqualHeight(cardWrapperClass) {
+  const cardWrappers = document.querySelectorAll(`.${cardWrapperClass}`);
 
 let maxHeight = 0;
 
-cardWrappers.forEach(cardWrapper => {
+cardWrappers.forEach((cardWrapper) => {
+  cardWrapper.style.height = "auto";
 
-    cardWrapper.style.height = 'auto';
-    
-    const wrapperHeight = cardWrapper.offsetHeight;
+  const wrapperHeight = cardWrapper.offsetHeight;
 
-    if (wrapperHeight > maxHeight) {
-        maxHeight = wrapperHeight;
-    }
+  if (wrapperHeight > maxHeight) {
+    maxHeight = wrapperHeight;
+  }
 });
 
-cardWrappers.forEach(cardWrapper => {
-    cardWrapper.style.minHeight = `${maxHeight}px`;
+cardWrappers.forEach((cardWrapper) => {
+  cardWrapper.style.minHeight = `${maxHeight}px`;
 });
+}
+
+setEqualHeight("testimonial__card_wrapper");
+setEqualHeight("step__card");
 
 
 
@@ -90,6 +93,25 @@ sr.reveal(`.ranking__points_bar`, { origin: "left", interval: 200 });
 // sr.reveal(`.footer__upper, .footer__line, .footer__bottom`);
 
 
+// Select all elements with the class 'store__product_btn'
+let add_to_cart_btns = document.querySelectorAll('.store__product_btn');
 
-
+// Attach an event listener to each button
+add_to_cart_btns.forEach(btn => {
+  btn.addEventListener("click", function() {
+    // Show toast notification when button is clicked
+    Toastify({
+      text: "Added to cart",
+      duration: 3000,
+      close: true,
+      gravity: "bottom", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      },
+      onClick: function(){} // Callback after click
+    }).showToast();
+  });
+});
 
