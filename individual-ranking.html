@@ -25,13 +25,13 @@
 </head>
 
 <body>
-    
-     <!-- ===== Preloader ===== -->
-     <div id="preloader">
+
+    <!-- ===== Preloader ===== -->
+    <div id="preloader">
         <div class="spinner"></div>
     </div>
 
-    
+
     <header>
         <!-- ===== Navbar ===== -->
         <nav class="navbar navbar-expand-md" id="navbar-top">
@@ -129,7 +129,7 @@
                 <div class="container-fluid">
                     <div class="row colourful__impact_cards-wrapper">
                         <div class="col-md-6 col-12 px-0">
-                            <div class="individual__impact_card individual__impact_card-big" >
+                            <div class="individual__impact_card individual__impact_card-big">
                                 <svg class="impact__card_svg" viewBox="0 0 66 96" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -205,10 +205,61 @@
 
                     </div>
 
-                    
+
                 </div>
             </div>
 
+        </section>
+
+
+
+        <!-- ===== Individual Slider section ===== -->
+
+        <section id="individual-company-slider">
+            <div class="section__data slide__section_data company__slider_section-data">
+                <div class="container-fluid swiper individual__company_swiper">
+
+                    <div class="company__slider_wrapper  swiper-wrapper">
+
+                        <a href="#" class="single__slide_wrapper swiper-slide">
+                            <div class="company__slide">
+                                <img class="company__slide_img" src="assets/images/company-slide-1.jpg" alt="">
+                                <div class="company__slide_data">
+                                    <p class="heading">Reforestaction BMW</p>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a href="#" class="single__slide_wrapper swiper-slide">
+                            <div class="company__slide">
+                                <img class="company__slide_img" src="assets/images/company-slide-2.jpg" alt="">
+                                <div class="company__slide_data">
+                                    <p class="heading">Upcycling</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        
+                        <a href="#" class="single__slide_wrapper swiper-slide">
+                            <div class="company__slide">
+                                <img class="company__slide_img" src="assets/images/company-slide-3.jpg" alt="">
+                                <div class="company__slide_data">
+                                    <p class="heading">Maraton Tangamanga</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        
+                    </div>
+                    <div class="swiper-pagination company__slide_pagination"></div>
+                
+
+
+
+
+                </div>
+            </div>
         </section>
 
 
@@ -266,5 +317,41 @@
     <script src="assets/js/script.js"></script>
 
 </body>
+
+<script>
+    var swiper = new Swiper(".individual__company_swiper", {
+       
+        slidesPerView: 3,
+        centeredSlides: false,
+        spaceBetween: 10,
+
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+        breakpoints: {
+            340: {
+                slidesPerView: "1.1",
+                centeredSlides: true,
+                spaceBetween: 15,
+            },
+            768: {
+                slidesPerView: "2",
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            },
+            1044: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            },
+        },
+
+
+    });
+</script>
 
 </html>
